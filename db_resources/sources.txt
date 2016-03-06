@@ -1,13 +1,5 @@
 More to consider: Languages Table,
 
-introduction: c_name, desc
-climate: climate
-languages: languages
-government type: govtype
-chief of state: govchief
-head of government: govhead
-economy: econ
-
 Countries (https://github.com/mledoze/countries) - Attributes: Population, leader, abbreviation, stats from UN, WHO & World Bank (http://databank.worldbank.org/data/home.aspx & http://apps.who.int/gho/data/node.home & http://data.un.org/)
 
 Leaders (scrape from CIA factbook: https://www.cia.gov/library/publications/download/) – Attributes: Start date, term length
