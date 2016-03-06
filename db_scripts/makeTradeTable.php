@@ -32,10 +32,10 @@ foreach ($dir as $fileinfo) {
                 $contents = explode(",", $line);
                 if ($contents[4] == "Trade (US$ Mil)-Top 5 Export Partner" || $contents[4] == "Trade (US$ Mil)-Top 5 Import Partner") {
                     $query = $conn->prepare("
-                  SELECT countryCode
-                  FROM Countries
-                  WHERE name = :p_name
-                ");
+                      SELECT countryCode
+                      FROM Countries
+                      WHERE name = :p_name
+                    ");
 
                     $query->bindValue(':p_name', utf8_encode($contents[1]), PDO::PARAM_STR);
                     $query->execute();
