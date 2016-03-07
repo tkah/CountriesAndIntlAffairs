@@ -53,23 +53,23 @@ for ($i = 1; $i < sizeof($csvFile); $i++) {
     if ($csvFile[$i + 1]) {
         $next = explode(",", $csvFile[$i + 1]);
         if ($startYear == trim($next[1]) - 1 && $conflictIdNoApp == trim($next[0])) {
-            echo "next year<br>";
+            //echo "next year<br>";
             $sameYearId = true;
             $sameId = false;
             $startYear = $prevStartYear;
         } elseif ($conflictIdNoApp == trim($next[0])) {
-            echo "same id<br>";
+            //echo "same id<br>";
             $sameId = true;
             $sameYearId = false;
             $endYear = $startYear;
-            $a2 = array();
-            $barr = array();
-            $b2 = array();
+            //$a2 = array();
+            //$barr = array();
+            //$b2 = array();
             $append += 1;
             $startYear = $prevStartYear;
             $prevStartYear = trim($next[1]);
         } else {
-            echo "else<br>";
+            //echo "else<br>";
             $append = 1;
             $endYear = $startYear;
             $sameId = false;
@@ -158,7 +158,7 @@ for ($i = 1; $i < sizeof($csvFile); $i++) {
           WHERE name = :p_name
         ");
 
-        $query->bindValue(':p_name', $sideA, PDO::PARAM_STR);
+        $query->bindValue(':p_name', utf8_encode($sideA), PDO::PARAM_STR);
         $query->execute();
         $c_code = $query->fetchAll(PDO::FETCH_ASSOC);
 
@@ -175,7 +175,7 @@ for ($i = 1; $i < sizeof($csvFile); $i++) {
                 ");
 
             $query->bindValue(':c_id', $conflictId, PDO::PARAM_STR);
-            $query->bindValue(':party', $name, PDO::PARAM_STR);
+            $query->bindValue(':party', utf8_encode($name), PDO::PARAM_STR);
             $query->bindValue(':isCountry', $isCountry, PDO::PARAM_STR);
             $query->execute();
         }
@@ -187,7 +187,7 @@ for ($i = 1; $i < sizeof($csvFile); $i++) {
                       WHERE name = :p_name
                     ");
 
-            $query->bindValue(':p_name', $name, PDO::PARAM_STR);
+            $query->bindValue(':p_name', utf8_encode($name), PDO::PARAM_STR);
             $query->execute();
             $c_code = $query->fetchAll(PDO::FETCH_ASSOC);
 
@@ -204,7 +204,7 @@ for ($i = 1; $i < sizeof($csvFile); $i++) {
                 ");
 
                 $query->bindValue(':c_id', $conflictId, PDO::PARAM_STR);
-                $query->bindValue(':party', $name, PDO::PARAM_STR);
+                $query->bindValue(':party', utf8_encode($name), PDO::PARAM_STR);
                 $query->bindValue(':isCountry', $isCountry, PDO::PARAM_STR);
                 $query->execute();
             }
@@ -217,7 +217,7 @@ for ($i = 1; $i < sizeof($csvFile); $i++) {
                       WHERE name = :p_name
                     ");
 
-            $query->bindValue(':p_name', $name, PDO::PARAM_STR);
+            $query->bindValue(':p_name', utf8_encode($name), PDO::PARAM_STR);
             $query->execute();
             $c_code = $query->fetchAll(PDO::FETCH_ASSOC);
 
@@ -234,7 +234,7 @@ for ($i = 1; $i < sizeof($csvFile); $i++) {
                 ");
 
                 $query->bindValue(':c_id', $conflictId, PDO::PARAM_STR);
-                $query->bindValue(':party', $name, PDO::PARAM_STR);
+                $query->bindValue(':party', utf8_encode($name), PDO::PARAM_STR);
                 $query->bindValue(':isCountry', $isCountry, PDO::PARAM_STR);
                 $query->execute();
             }
@@ -247,7 +247,7 @@ for ($i = 1; $i < sizeof($csvFile); $i++) {
                       WHERE name = :p_name
                     ");
 
-            $query->bindValue(':p_name', $name, PDO::PARAM_STR);
+            $query->bindValue(':p_name', utf8_encode($name), PDO::PARAM_STR);
             $query->execute();
             $c_code = $query->fetchAll(PDO::FETCH_ASSOC);
 
@@ -264,7 +264,7 @@ for ($i = 1; $i < sizeof($csvFile); $i++) {
                 ");
 
                 $query->bindValue(':c_id', $conflictId, PDO::PARAM_STR);
-                $query->bindValue(':party', $name, PDO::PARAM_STR);
+                $query->bindValue(':party', utf8_encode($name), PDO::PARAM_STR);
                 $query->bindValue(':isCountry', $isCountry, PDO::PARAM_STR);
                 $query->execute();
             }
@@ -288,7 +288,7 @@ for ($i = 1; $i < sizeof($csvFile); $i++) {
     echo "<br><br>";
     */
 
-    if (!$sameId && !$sameYearId) {
+    if (!$sameYearId) {
         $a2 = array();
         $barr = array();
         $b2 = array();
