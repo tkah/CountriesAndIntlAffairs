@@ -271,6 +271,7 @@ for ($i = 1; $i < sizeof($csvFile); $i++) {
         }
     }
 
+    /*
     echo $conflictId . "<br>";
     echo "--------------------<br>";
     echo $startYear . " " . $location . "<br>";
@@ -285,42 +286,11 @@ for ($i = 1; $i < sizeof($csvFile); $i++) {
     echo "B Support: ";
     foreach ($b2 as $bstring) echo $bstring . " ";
     echo "<br><br>";
+    */
 
     if (!$sameId && !$sameYearId) {
         $a2 = array();
         $barr = array();
         $b2 = array();
     }
-
-    /*
-    $query = $conn->prepare("
-      SELECT countryCode
-      FROM Countries
-      WHERE name = :p_name
-    ");
-
-    $query->bindValue(':p_name', utf8_encode($contents[1]), PDO::PARAM_STR);
-    $query->execute();
-    $p_code = $query->fetchAll(PDO::FETCH_ASSOC);
-
-    if ($p_code) {
-        $p_code = $p_code[0]['countryCode'];
-        $query = $conn->prepare("
-        INSERT INTO TradesWith (countryCode, partnerCountryCode, type, total)
-        VALUES (:code, :p_code, :type, :total)
-    ");
-
-        $query->bindValue(':code', $countryCode, PDO::PARAM_STR);
-        $query->bindValue(':p_code', $p_code, PDO::PARAM_STR);
-        $query->bindValue(':type', $contents[3], PDO::PARAM_STR);
-        $query->bindValue(':total', strval($contents[5]), PDO::PARAM_STR);
-        $query->execute();
-    }
-
-    /*
-    echo $p_code;
-    echo utf8_encode($contents[1]);
-    echo $contents[3];
-    echo strval($contents[5]);
-    */
 }
