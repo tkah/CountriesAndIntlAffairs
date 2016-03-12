@@ -1,0 +1,40 @@
+Project Name: Countries and International Affairs
+1.Description
+Our project will show the Countries and some relevant 
+International Affairs. This includes 4 entities sets and 6 relationships.
+===== Entities ======
+1)Countries(countryCode, name, population, unStats, whoStats, wbStats)
+This describe some basic information about a country. Although
+a country's name is unqiue, we also used a standard countryCode
+as the key. It is good to use a fixed length countryCode to represent
+a country than to use various length country names if we want to organize
+the data more beautifully. Some countires have really long names.  
+2)Leaders(name, term, gender)
+
+This entity set stores the Leaders' information. There is very few
+case that leaders had same name. Commonly, leaders ran several
+terms.  To indicate some international affairs, we need to indicate
+the time and term of a certain leader.
+
+3)Conflicts(name, dateStart, dateEnd, descriptiono)
+This records the conflicts between two or more countries. We consider the 
+dateStart, dateEnd and description are all determined by a given conflict name.
+
+4)Treaties(name, description) is in some sense the reverse kind of conflict.
+They are often good affairs between two or more contries. Similarly,
+we consider that the description can be determined by the treaties' name.
+
+===== Relationships =====
+1)The leaderOf relationship from Leaders to Countries is many-one. A leader
+must lead one country. While a country has many leaders at different time.
+2)The borders is from Countries to Countries because often a country has
+many neighbors. This is a many-many realtionship.
+3)The tradesWith is also a many-many relationship. We added a totalTrade 
+attribute to this relationship.
+4)The migration is also a many-many relationship. We added immigrants and 
+emmigrants attibutes to it.
+5)The conflictParty is a many-many relationship. A country may involved in
+many conflicts in history. A conflict may include many countries as well.
+6)The relationship treatySignee is really like conflictParty just like the
+entity Treaties is like Conflicts. The treatySignee is a many-many 
+relationship.
