@@ -11,15 +11,16 @@ include('simple_html_dom.php');
 
 $sql = "CREATE TABLE Countries (
     countryCode VARCHAR(3) PRIMARY KEY,
+    countryNumber VARCHAR(3) NOT NULL,
     name VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-    region VARCHAR(100),
     subregion VARCHAR(100),
     capital VARCHAR(50),
     factbookCode VARCHAR(2),
     generalInfo TEXT,
     climate TEXT,
     govType TEXT,
-    economy TEXT
+    economy TEXT,
+    UNIQUE KEY(countryNumber)
     )";
 
 // use exec() because no results are returned
@@ -31,13 +32,13 @@ $file = json_decode($file_json, true);
 foreach ($file as $country) {
 
     $query = $conn->prepare("
-        INSERT INTO Countries (countryCode, name, region, subregion, capital)
-        VALUES (:code, :name, :region, :subregion, :capital)
+        INSERT INTO Countries (countryCode, countryNumber,name, region, subregion, capital)
+        VALUES (:code, :number, :name, :subregion, :capital)
     ");
 
     $query->bindValue(':code', $country["cca3"], PDO::PARAM_STR);
+    $query->bindValue(':number', $country["ccn3"], PDO::PARAM_STR);
     $query->bindValue(':name', $country["name"]["common"], PDO::PARAM_STR);
-    $query->bindValue(':region', $country["region"], PDO::PARAM_STR);
     $query->bindValue(':subregion', $country["subregion"], PDO::PARAM_STR);
     $query->bindValue(':capital', $country["capital"], PDO::PARAM_STR);
     $query->execute();

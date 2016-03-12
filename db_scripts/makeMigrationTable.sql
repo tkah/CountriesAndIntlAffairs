@@ -1,7 +1,7 @@
 SHOW DATABASES;
 USE countriesAndIntlAffairs;
 
-DROP TABLE Migrations;
+DROP if exists Migrations;
 
 CREATE TABLE Migrations (
   destCountry VARCHAR(3), 
