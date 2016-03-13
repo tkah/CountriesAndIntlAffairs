@@ -9,23 +9,6 @@
 if (!isset($conn)) require_once("db_connection.php");
 include('simple_html_dom.php');
 
-$sql = "CREATE TABLE Countries (
-    countryCode VARCHAR(3) PRIMARY KEY,
-    countryNumber VARCHAR(3) NOT NULL,
-    name VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-    subregion VARCHAR(100),
-    capital VARCHAR(50),
-    factbookCode VARCHAR(2),
-    generalInfo TEXT,
-    climate TEXT,
-    govType TEXT,
-    economy TEXT,
-    UNIQUE KEY(countryNumber)
-    )";
-
-// use exec() because no results are returned
-$conn->exec($sql);
-
 $file_json = file_get_contents("../db_resources/countries-unescaped.json");
 $file = json_decode($file_json, true);
 

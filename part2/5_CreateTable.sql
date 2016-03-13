@@ -40,7 +40,6 @@ CREATE TABLE ConflictParties (
     conflictId VARCHAR(10),
     partyName VARCHAR(100),
     side VARCHAR(1),
-    isCountry INT(1),
     PRIMARY KEY (conflictId, partyName));
 
 drop table if exists LanguagesSpoken;    

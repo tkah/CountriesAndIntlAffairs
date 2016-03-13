@@ -9,16 +9,6 @@
 if (!isset($conn)) require_once("db_connection.php");
 include('simple_html_dom.php');
 
-$sql = "CREATE TABLE LanguagesSpoken (
-    countryCode VARCHAR(3),
-    language VARCHAR(100),
-    percentPop VARCHAR(25),
-    PRIMARY KEY (countryCode, language)
-    )";
-
-// use exec() because no results are returned
-$conn->exec($sql);
-
 $dir = new DirectoryIterator(dirname("../db_resources/geos/aa.html"));
 foreach ($dir as $fileinfo) {
     if (!$fileinfo->isDot()) {

@@ -9,26 +9,6 @@
 if (!isset($conn)) require_once("db_connection.php");
 include('simple_html_dom.php');
 
-$sql = "CREATE TABLE Leaders (
-    name VARCHAR(150),
-    type VARCHAR(25),
-    termStart VARCHAR(30),
-    termEnd VARCHAR(30),
-    PRIMARY KEY (name, type)
-    )";
-
-// use exec() because no results are returned
-$conn->exec($sql);
-
-$sql = "CREATE TABLE LeaderOf (
-    countryCode VARCHAR(3),
-    leaderName VARCHAR(150),
-    PRIMARY KEY (countryCode, leaderName)
-    )";
-
-// use exec() because no results are returned
-$conn->exec($sql);
-
 $dir = new DirectoryIterator(dirname("../db_resources/geos/aa.html"));
 foreach ($dir as $fileinfo) {
     if (!$fileinfo->isDot()) {
