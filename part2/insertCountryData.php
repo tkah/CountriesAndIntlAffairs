@@ -15,7 +15,7 @@ $file = json_decode($file_json, true);
 foreach ($file as $country) {
 
     $query = $conn->prepare("
-        INSERT INTO Countries (countryCode, countryNumber,name, region, subregion, capital)
+        INSERT INTO Countries (countryCode, countryNumber, name, subregion, capital)
         VALUES (:code, :number, :name, :subregion, :capital)
     ");
 
