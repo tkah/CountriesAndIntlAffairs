@@ -9,6 +9,7 @@
 if (!isset($conn)) require_once("db_connection.php");
 include('simple_html_dom.php');
 
+<<<<<<< HEAD:db_scripts/makeCountryTable.php
 //1.drop existing table
 $sql = "DROP TABLE if exists Countries";
 $conn->exec($sql);
@@ -31,6 +32,8 @@ $sql = "CREATE TABLE Countries (
 // use exec() because no results are returned
 $conn->exec($sql);
 
+=======
+>>>>>>> b2a89c6697317b210c4ccb09602bf260be1b71dd:db_scripts/insertCountryData.php
 $file_json = file_get_contents("../db_resources/countries-unescaped.json");
 $file = json_decode($file_json, true);
 foreach ($file as $country) {

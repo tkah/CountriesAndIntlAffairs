@@ -7,17 +7,6 @@
 
 if (!isset($conn)) require_once("db_connection.php");
 
-$sql = "CREATE TABLE TradesWith (
-    countryCode VARCHAR(3),
-    partnerCountryCode VARCHAR(20),
-    type VARCHAR(6) NOT NULL,
-    total VARCHAR(20) NOT NULL,
-    PRIMARY KEY (countryCode, partnerCountryCode, type)
-    )";
-
-// use exec() because no results are returned
-$conn->exec($sql);
-
 $dir = new DirectoryIterator(dirname("../db_resources/wits_en_trade_summary/en_ABW_AllYears_WITS_Trade_Summary.CSV"));
 foreach ($dir as $fileinfo) {
     if (!$fileinfo->isDot()) {

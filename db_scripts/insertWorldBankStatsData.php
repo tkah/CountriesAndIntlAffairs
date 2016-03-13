@@ -6,25 +6,6 @@
 
 if (!isset($conn)) require_once("db_connection.php");
 
-$sql = "CREATE TABLE WorldBankStats (
-    countryCode VARCHAR(3),
-    statType VARCHAR(30),
-    year2005 VARCHAR(20),
-    year2006 VARCHAR(20),
-    year2007 VARCHAR(20),
-    year2008 VARCHAR(20),
-    year2009 VARCHAR(20),
-    year2010 VARCHAR(20),
-    year2011 VARCHAR(20),
-    year2012 VARCHAR(20),
-    year2013 VARCHAR(20),
-    year2014 VARCHAR(20),
-    PRIMARY KEY (countryCode, statType)
-    )";
-
-// use exec() because no results are returned
-$conn->exec($sql);
-
 $csvFile = file("../db_resources/population.csv");
 for ($i = 1; $i < sizeof($csvFile); $i++) {
     //$data[] = str_getcsv($line);

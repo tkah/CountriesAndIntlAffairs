@@ -6,6 +6,7 @@
 
 if (!isset($conn)) require_once("db_connection.php");
 
+<<<<<<< HEAD:db_scripts/makeConflictsTables.php
 //1.drop existing table
 $sql = "DROP TABLE if exists Conflicts";
 $conn->exec($sql);
@@ -32,6 +33,8 @@ $sql = "CREATE TABLE ConflictParties (
 // use exec() because no results are returned
 $conn->exec($sql);
 
+=======
+>>>>>>> b2a89c6697317b210c4ccb09602bf260be1b71dd:db_scripts/insertConflictsData.php
 $csvFile = file("../db_resources/124920_1ucdpprio-armed-conflict-dataset-v.4-2015.csv");
 
 $sameId = false;
@@ -167,21 +170,16 @@ for ($i = 1; $i < sizeof($csvFile); $i++) {
         $query->execute();
         $c_code = $query->fetchAll(PDO::FETCH_ASSOC);
 
-        $isCountry = 0;
-        if ($c_code) {
-            $name = $c_code[0]['countryCode'];
-            $isCountry = 1;
-        }
+        if ($c_code) $name = $c_code[0]['countryCode'];
 
         if ($name && strlen($name) > 1) {
             $query = $conn->prepare("
-                    INSERT IGNORE INTO ConflictParties (conflictId, partyName, side, isCountry)
-                    VALUES (:c_id, :party, 'A', :isCountry)
+                    INSERT IGNORE INTO ConflictParties (conflictId, partyName, side)
+                    VALUES (:c_id, :party, 'A')
                 ");
 
             $query->bindValue(':c_id', $conflictId, PDO::PARAM_STR);
             $query->bindValue(':party', utf8_encode($name), PDO::PARAM_STR);
-            $query->bindValue(':isCountry', $isCountry, PDO::PARAM_STR);
             $query->execute();
         }
 
@@ -196,16 +194,12 @@ for ($i = 1; $i < sizeof($csvFile); $i++) {
             $query->execute();
             $c_code = $query->fetchAll(PDO::FETCH_ASSOC);
 
-            $isCountry = 0;
-            if ($c_code) {
-                $name = $c_code[0]['countryCode'];
-                $isCountry = 1;
-            }
+            if ($c_code) $name = $c_code[0]['countryCode'];
 
             if ($name && strlen($name) > 1) {
                 $query = $conn->prepare("
-                    INSERT IGNORE INTO ConflictParties (conflictId, partyName, side, isCountry)
-                    VALUES (:c_id, :party, 'A', :isCountry)
+                    INSERT IGNORE INTO ConflictParties (conflictId, partyName, side)
+                    VALUES (:c_id, :party, 'A')
                 ");
 
                 $query->bindValue(':c_id', $conflictId, PDO::PARAM_STR);
@@ -226,21 +220,16 @@ for ($i = 1; $i < sizeof($csvFile); $i++) {
             $query->execute();
             $c_code = $query->fetchAll(PDO::FETCH_ASSOC);
 
-            $isCountry = 0;
-            if ($c_code) {
-                $name = $c_code[0]['countryCode'];
-                $isCountry = 1;
-            }
+            if ($c_code) $name = $c_code[0]['countryCode'];
 
             if ($name && strlen($name) > 1) {
                 $query = $conn->prepare("
-                    INSERT IGNORE INTO ConflictParties (conflictId, partyName, side, isCountry)
-                    VALUES (:c_id, :party, 'B', :isCountry)
+                    INSERT IGNORE INTO ConflictParties (conflictId, partyName, side)
+                    VALUES (:c_id, :party, 'B')
                 ");
 
                 $query->bindValue(':c_id', $conflictId, PDO::PARAM_STR);
                 $query->bindValue(':party', utf8_encode($name), PDO::PARAM_STR);
-                $query->bindValue(':isCountry', $isCountry, PDO::PARAM_STR);
                 $query->execute();
             }
         }
@@ -256,21 +245,16 @@ for ($i = 1; $i < sizeof($csvFile); $i++) {
             $query->execute();
             $c_code = $query->fetchAll(PDO::FETCH_ASSOC);
 
-            $isCountry = 0;
-            if ($c_code) {
-                $name = $c_code[0]['countryCode'];
-                $isCountry = 1;
-            }
+            if ($c_code) $name = $c_code[0]['countryCode'];
 
             if ($name && strlen($name) > 1) {
                 $query = $conn->prepare("
-                    INSERT IGNORE INTO ConflictParties (conflictId, partyName, side, isCountry)
-                    VALUES (:c_id, :party, 'B', :isCountry)
+                    INSERT IGNORE INTO ConflictParties (conflictId, partyName, side)
+                    VALUES (:c_id, :party, 'B')
                 ");
 
                 $query->bindValue(':c_id', $conflictId, PDO::PARAM_STR);
                 $query->bindValue(':party', utf8_encode($name), PDO::PARAM_STR);
-                $query->bindValue(':isCountry', $isCountry, PDO::PARAM_STR);
                 $query->execute();
             }
         }
