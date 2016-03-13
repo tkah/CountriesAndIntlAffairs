@@ -1,4 +1,7 @@
-DROP if exists Treaties;
+use countriesAndIntlAffairs;
+
+DROP table if exists Treaties;
+
 CREATE TABLE Treaties(
   treatyNumber varchar(8),
   name  varchar(255)  NOT NULL,
@@ -41,7 +44,7 @@ INSERT INTO Treaties VALUES
 INSERT INTO Treaties VALUES
 ('ICRC0001','Geneva Conventions','19490812','The Geneva Conventions comprise four treaties, and three additional protocols, that establish the standards of international law for the humanitarian treatment of war','https://en.wikipedia.org/wiki/Geneva_Conventions');
 
-DROP if exists TreatyParties;
+DROP table if exists TreatyParties;
 CREATE TABLE TreatyParties(
   treatyNumber varchar(8) NOT NULL,
   countryNumber  varchar(3)  NOT NULL,

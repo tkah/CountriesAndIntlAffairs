@@ -1,7 +1,7 @@
 SHOW DATABASES;
 USE countriesAndIntlAffairs;
 
-DROP if exists Migrations;
+DROP table if exists Migrations;
 
 CREATE TABLE Migrations (
   destCountry VARCHAR(3), 
@@ -10,7 +10,7 @@ CREATE TABLE Migrations (
   totalAmount DECIMAL(8)  NOT NULL,
   PRIMARY KEY(destCountry,origCountry,inYear));
 
-LOAD DATA INFILE '/var/tmp/migartion.csv'
+LOAD DATA INFILE '/var/tmp/migration.csv'
 INTO TABLE Migrations
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'

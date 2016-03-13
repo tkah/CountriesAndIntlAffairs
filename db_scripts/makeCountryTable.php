@@ -9,6 +9,11 @@
 if (!isset($conn)) require_once("db_connection.php");
 include('simple_html_dom.php');
 
+//1.drop existing table
+$sql = "DROP TABLE if exists Countries";
+$conn->exec($sql);
+
+//2.create table Countries
 $sql = "CREATE TABLE Countries (
     countryCode VARCHAR(3) PRIMARY KEY,
     countryNumber VARCHAR(3) NOT NULL,
@@ -28,14 +33,12 @@ $conn->exec($sql);
 
 $file_json = file_get_contents("../db_resources/countries-unescaped.json");
 $file = json_decode($file_json, true);
-
 foreach ($file as $country) {
 
     $query = $conn->prepare("
-        INSERT INTO Countries (countryCode, countryNumber,name, region, subregion, capital)
+        INSERT INTO Countries (countryCode, countryNumber,name, subregion, capital)
         VALUES (:code, :number, :name, :subregion, :capital)
     ");
-
     $query->bindValue(':code', $country["cca3"], PDO::PARAM_STR);
     $query->bindValue(':number', $country["ccn3"], PDO::PARAM_STR);
     $query->bindValue(':name', $country["name"]["common"], PDO::PARAM_STR);

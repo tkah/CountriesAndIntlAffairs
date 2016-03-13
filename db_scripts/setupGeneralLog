@@ -1,0 +1,2 @@
+sudo mysqld --general_log=1 --general_log_file=general.log --log-output=FILE
+

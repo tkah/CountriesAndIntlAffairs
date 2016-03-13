@@ -9,6 +9,11 @@
 if (!isset($conn)) require_once("db_connection.php");
 include('simple_html_dom.php');
 
+//1.drop existing table
+$sql = "DROP TABLE if exists Leaders";
+$conn->exec($sql);
+
+//2.create table Leaders
 $sql = "CREATE TABLE Leaders (
     name VARCHAR(150),
     type VARCHAR(25),
