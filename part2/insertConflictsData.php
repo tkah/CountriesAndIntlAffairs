@@ -175,7 +175,7 @@ for ($i = 1; $i < sizeof($csvFile); $i++) {
 
                 $query->bindValue(':c_id', $conflictId, PDO::PARAM_STR);
                 $query->bindValue(':party', utf8_encode($name), PDO::PARAM_STR);
-                $query->bindValue(':isCountry', $isCountry, PDO::PARAM_STR);
+                //$query->bindValue(':isCountry', $isCountry, PDO::PARAM_STR);
                 $query->execute();
             }
         }

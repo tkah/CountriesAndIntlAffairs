@@ -1,0 +1,68 @@
+/usr/sbin/mysqld, Version: 5.5.43-0ubuntu0.14.04.1-log ((Ubuntu)). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+160313 14:46:02	   36 Query	select count(*) from Migrations
+160313 14:46:12	   36 Query	select count(*) from Treaties
+160313 14:47:33	   36 Query	SHOW DATABASES
+		   36 Query	SELECT DATABASE()
+		   36 Init DB	countriesAndIntlAffairs
+		   36 Query	DROP table if exists Migrations
+		   36 Query	CREATE TABLE Migrations (
+  destCountry VARCHAR(3), 
+  origCountry VARCHAR(3),
+  inYear      VARCHAR(4), 
+  totalAmount DECIMAL(8)  NOT NULL,
+  PRIMARY KEY(destCountry,origCountry,inYear))
+		   36 Query	LOAD DATA INFILE '/var/tmp/migration.csv'
+INTO TABLE Migrations
+COLUMNS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+ESCAPED BY '"'
+LINES TERMINATED BY '\n'
+160313 14:47:34	   36 Query	SELECT * FROM Migrations LIMIT 10
+160313 14:47:51	   36 Query	SELECT DATABASE()
+		   36 Init DB	countriesAndIntlAffairs
+		   36 Query	DROP table if exists Treaties
+		   36 Query	CREATE TABLE Treaties(
+  treatyNumber varchar(8),
+  name  varchar(255)  NOT NULL,
+  dateEnforced  varchar(8) NOT NULL,
+  description varchar(255) NOT NULL,
+  wikipage  varchar(255) NOT NULL,
+  PRIMARY KEY(treatyNumber)
+)
+		   36 Query	INSERT INTO Treaties VALUES
+('UNI35597','Ottawa Treaty','19990301','Prohibition of the Use, Stockpiling, Production and Transfer of Anti-Personnel Mines and on their Destruction','https://en.wikipedia.org/wiki/List_of_parties_to_the_Ottawa_Treaty')
+		   36 Query	INSERT INTO Treaties VALUES
+('UNI38544','Rome Statute','20020701','Rome Statute of the International Criminal Court','https://en.wikipedia.org/wiki/States_parties_to_the_Rome_Statute_of_the_International_Criminal_Court')
+		   36 Query	INSERT INTO Treaties VALUES
+('UNI20378','Elimination of Discrimination against Women','19810903','Convention on the Elimination of All Forms of Discrimination against Women','https://en.wikipedia.org/wiki/List_of_parties_to_the_Convention_on_the_Elimination_of_All_Forms_of_Discrimination_Against_Women')
+		   36 Query	INSERT INTO Treaties VALUES
+('UNI30822','Framework Convention on Climate Change','19940321','United Nations Framework Convention on Climate Change','https://en.wikipedia.org/wiki/List_of_parties_to_the_United_Nations_Framework_Convention_on_Climate_Change')
+		   36 Query	INSERT INTO Treaties VALUES
+('UNA30822','Kyoto Protocol','20050216','Kyoto Protocol to the United Nations Framework Convention on Climate Change','https://en.wikipedia.org/wiki/List_of_parties_to_the_Kyoto_Protocol')
+		   36 Query	INSERT INTO Treaties VALUES
+('UNI01021','Genocide Convention','19510112','Prevention and Punishment of the Crime of Genocide (CPPCG)','https://en.wikipedia.org/wiki/Genocide_Convention')
+		   36 Query	INSERT INTO Treaties VALUES
+('UNI31363','Law of the Sea','19941116','United Nations Convention on the Law of the Sea','https://en.wikipedia.org/wiki/List_of_parties_to_the_United_Nations_Convention_on_the_Law_of_the_Sea')
+		   36 Query	INSERT INTO Treaties VALUES
+('UNI14860','Biological Weapons Convention','19750326','Convention on the prohibition of the development, production and stockpiling of bacteriological (biological) and toxin weapons and on their destruction','https://en.wikipedia.org/wiki/List_of_parties_to_the_Biological_Weapons_Convention')
+		   36 Query	INSERT INTO Treaties VALUES
+('UNI33757','Chemical Weapons Convention','19970429','Convention on the Prohibition of the Development, Production, Stockpiling and Use of Chemical Weapons and on their Destruction','https://en.wikipedia.org/wiki/List_of_parties_to_the_Chemical_Weapons_Convention')
+		   36 Query	INSERT INTO Treaties VALUES
+('UNI10485','Non-Proliferation of Nuclear Weapons','19700305','Treaty on the Non-Proliferation of Nuclear Weapons','https://en.wikipedia.org/wiki/List_of_parties_to_the_Treaty_on_the_Non-Proliferation_of_Nuclear_Weapons')
+		   36 Query	INSERT INTO Treaties VALUES
+('ICRC0001','Geneva Conventions','19490812','The Geneva Conventions comprise four treaties, and three additional protocols, that establish the standards of international law for the humanitarian treatment of war','https://en.wikipedia.org/wiki/Geneva_Conventions')
+		   36 Query	DROP table if exists TreatyParties
+		   36 Query	CREATE TABLE TreatyParties(
+  treatyNumber varchar(8) NOT NULL,
+  countryNumber  varchar(3)  NOT NULL,
+  PRIMARY KEY(treatyNumber,countryNumber)
+)
+		   36 Query	LOAD DATA INFILE '/var/tmp/outTreaty.csv'
+INTO TABLE TreatyParties
+COLUMNS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+ESCAPED BY '"'
+LINES TERMINATED BY '\n'
+		   36 Query	SELECT * FROM TreatyParties LIMIT 10

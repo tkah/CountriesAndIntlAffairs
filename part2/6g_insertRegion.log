@@ -1,0 +1,793 @@
+/usr/sbin/mysqld, Version: 5.5.43-0ubuntu0.14.04.1-log ((Ubuntu)). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+160313 14:37:27	   48 Connect	root@localhost on countriesAndIntlAffairs
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Execute	INSERT INTO Regions (subRegion, region)
+          VALUES ('Caribbean', 'Americas')
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Execute	INSERT INTO Regions (subRegion, region)
+          VALUES ('Southern Asia', 'Asia')
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Execute	INSERT INTO Regions (subRegion, region)
+          VALUES ('Middle Africa', 'Africa')
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Execute	INSERT INTO Regions (subRegion, region)
+          VALUES ('Northern Europe', 'Europe')
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Execute	INSERT INTO Regions (subRegion, region)
+          VALUES ('Southern Europe', 'Europe')
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Execute	INSERT INTO Regions (subRegion, region)
+          VALUES ('Western Asia', 'Asia')
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Execute	INSERT INTO Regions (subRegion, region)
+          VALUES ('South America', 'Americas')
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Execute	INSERT INTO Regions (subRegion, region)
+          VALUES ('Polynesia', 'Oceania')
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Execute	INSERT INTO Regions (subRegion, region)
+          VALUES ('Australia and New Zealand', 'Oceania')
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Execute	INSERT INTO Regions (subRegion, region)
+          VALUES ('Western Europe', 'Europe')
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Execute	INSERT INTO Regions (subRegion, region)
+          VALUES ('Eastern Africa', 'Africa')
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Execute	INSERT INTO Regions (subRegion, region)
+          VALUES ('Western Africa', 'Africa')
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Execute	INSERT INTO Regions (subRegion, region)
+          VALUES ('Eastern Europe', 'Europe')
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Execute	INSERT INTO Regions (subRegion, region)
+          VALUES ('Central America', 'Americas')
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Execute	INSERT INTO Regions (subRegion, region)
+          VALUES ('Northern America', 'Americas')
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Execute	INSERT INTO Regions (subRegion, region)
+          VALUES ('South-Eastern Asia', 'Asia')
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Execute	INSERT INTO Regions (subRegion, region)
+          VALUES ('Southern Africa', 'Africa')
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Execute	INSERT INTO Regions (subRegion, region)
+          VALUES ('Eastern Asia', 'Asia')
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Execute	INSERT INTO Regions (subRegion, region)
+          VALUES ('Northern Africa', 'Africa')
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Execute	INSERT INTO Regions (subRegion, region)
+          VALUES ('Melanesia', 'Oceania')
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Execute	INSERT INTO Regions (subRegion, region)
+          VALUES ('Micronesia', 'Oceania')
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Execute	INSERT INTO Regions (subRegion, region)
+          VALUES ('Central Asia', 'Asia')
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Prepare	INSERT INTO Regions (subRegion, region)
+          VALUES (?, ?)
+		   48 Close stmt	
+		   48 Close stmt	
+		   48 Quit	

@@ -1,0 +1,3251 @@
+/usr/sbin/mysqld, Version: 5.5.43-0ubuntu0.14.04.1-log ((Ubuntu)). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+160313 14:25:26	   44 Connect	root@localhost on countriesAndIntlAffairs
+		   44 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   44 Close stmt	
+		   44 Quit	
+160313 14:25:42	   36 Query	truncate table Borders
+160313 14:25:47	   45 Connect	root@localhost on countriesAndIntlAffairs
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('AFG', 'IRN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('AFG', 'PAK')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('AFG', 'TKM')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('AFG', 'UZB')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('AFG', 'TJK')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('AFG', 'CHN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('AGO', 'COG')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('AGO', 'COD')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('AGO', 'ZMB')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('AGO', 'NAM')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ALB', 'MNE')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ALB', 'GRC')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ALB', 'MKD')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ALB', 'KOS')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('AND', 'FRA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('AND', 'ESP')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ARE', 'OMN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ARE', 'SAU')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ARG', 'BOL')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ARG', 'BRA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ARG', 'CHL')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ARG', 'PRY')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ARG', 'URY')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ARM', 'AZE')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ARM', 'GEO')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ARM', 'IRN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ARM', 'TUR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('AUT', 'CZE')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('AUT', 'DEU')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('AUT', 'HUN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('AUT', 'ITA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('AUT', 'LIE')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('AUT', 'SVK')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('AUT', 'SVN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('AUT', 'CHE')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('AZE', 'ARM')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('AZE', 'GEO')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('AZE', 'IRN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('AZE', 'RUS')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('AZE', 'TUR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BDI', 'COD')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BDI', 'RWA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BDI', 'TZA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BEL', 'FRA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BEL', 'DEU')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BEL', 'LUX')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BEL', 'NLD')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BEN', 'BFA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BEN', 'NER')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BEN', 'NGA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BEN', 'TGO')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BFA', 'BEN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BFA', 'CIV')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BFA', 'GHA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BFA', 'MLI')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BFA', 'NER')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BFA', 'TGO')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BGD', 'MMR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BGD', 'IND')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BGR', 'GRC')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BGR', 'MKD')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BGR', 'ROU')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BGR', 'SRB')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BGR', 'TUR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BIH', 'HRV')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BIH', 'MNE')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BIH', 'SRB')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BLR', 'LVA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BLR', 'LTU')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BLR', 'POL')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BLR', 'RUS')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BLR', 'UKR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BLZ', 'GTM')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BLZ', 'MEX')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BOL', 'ARG')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BOL', 'BRA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BOL', 'CHL')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BOL', 'PRY')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BOL', 'PER')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BRA', 'ARG')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BRA', 'BOL')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BRA', 'COL')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BRA', 'GUF')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BRA', 'GUY')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BRA', 'PRY')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BRA', 'PER')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BRA', 'SUR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BRA', 'URY')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BRA', 'VEN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BRN', 'MYS')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+160313 14:25:48	   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BTN', 'CHN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BTN', 'IND')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BWA', 'NAM')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BWA', 'ZAF')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BWA', 'ZMB')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('BWA', 'ZWE')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CAF', 'CMR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CAF', 'TCD')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CAF', 'COD')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CAF', 'COG')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CAF', 'SSD')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CAF', 'SDN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CAN', 'USA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CHE', 'AUT')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CHE', 'FRA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CHE', 'ITA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CHE', 'LIE')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CHE', 'DEU')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CHL', 'ARG')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CHL', 'BOL')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CHL', 'PER')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CHN', 'AFG')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CHN', 'BTN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CHN', 'MMR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CHN', 'HKG')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CHN', 'IND')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CHN', 'KAZ')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CHN', 'PRK')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CHN', 'KGZ')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CHN', 'LAO')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CHN', 'MAC')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CHN', 'MNG')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CHN', 'PAK')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CHN', 'RUS')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CHN', 'TJK')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CHN', 'VNM')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CIV', 'BFA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CIV', 'GHA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CIV', 'GIN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CIV', 'LBR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CIV', 'MLI')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CMR', 'CAF')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CMR', 'TCD')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CMR', 'COG')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CMR', 'GNQ')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CMR', 'GAB')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CMR', 'NGA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('COD', 'AGO')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('COD', 'BDI')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('COD', 'CAF')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('COD', 'COG')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('COD', 'RWA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('COD', 'SSD')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('COD', 'TZA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('COD', 'UGA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('COD', 'ZMB')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('COG', 'AGO')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('COG', 'CMR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('COG', 'CAF')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('COG', 'COD')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('COG', 'GAB')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('COL', 'BRA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('COL', 'ECU')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('COL', 'PAN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('COL', 'PER')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('COL', 'VEN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CRI', 'NIC')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CRI', 'PAN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CYP', 'GBR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CZE', 'AUT')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CZE', 'DEU')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CZE', 'POL')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('CZE', 'SVK')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('DEU', 'AUT')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('DEU', 'BEL')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('DEU', 'CZE')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('DEU', 'DNK')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('DEU', 'FRA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('DEU', 'LUX')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('DEU', 'NLD')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('DEU', 'POL')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('DEU', 'CHE')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('DJI', 'ERI')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('DJI', 'ETH')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('DJI', 'SOM')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('DNK', 'DEU')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('DOM', 'HTI')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('DZA', 'TUN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('DZA', 'LBY')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('DZA', 'NER')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('DZA', 'ESH')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('DZA', 'MRT')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('DZA', 'MLI')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('DZA', 'MAR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ECU', 'COL')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ECU', 'PER')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('EGY', 'ISR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('EGY', 'LBY')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('EGY', 'SDN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ERI', 'DJI')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ERI', 'ETH')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ERI', 'SDN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ESH', 'DZA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ESH', 'MRT')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ESH', 'MAR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ESP', 'AND')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ESP', 'FRA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ESP', 'GIB')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ESP', 'PRT')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ESP', 'MAR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('EST', 'LVA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('EST', 'RUS')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ETH', 'DJI')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ETH', 'ERI')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ETH', 'KEN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ETH', 'SOM')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ETH', 'SSD')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ETH', 'SDN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('FIN', 'NOR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('FIN', 'SWE')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('FIN', 'RUS')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('FRA', 'AND')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('FRA', 'BEL')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('FRA', 'DEU')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('FRA', 'ITA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('FRA', 'LUX')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('FRA', 'MCO')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('FRA', 'ESP')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('FRA', 'CHE')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GAB', 'CMR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GAB', 'COG')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GAB', 'GNQ')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GBR', 'IRL')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GEO', 'ARM')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GEO', 'AZE')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GEO', 'RUS')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GEO', 'TUR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GHA', 'BFA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GHA', 'CIV')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GHA', 'TGO')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GIB', 'ESP')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GIN', 'CIV')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GIN', 'GNB')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GIN', 'LBR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GIN', 'MLI')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GIN', 'SEN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GIN', 'SLE')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GMB', 'SEN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GNB', 'GIN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GNB', 'SEN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GNQ', 'CMR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GNQ', 'GAB')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GRC', 'ALB')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GRC', 'BGR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GRC', 'TUR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GRC', 'MKD')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GTM', 'BLZ')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GTM', 'SLV')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GTM', 'HND')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GTM', 'MEX')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GUF', 'BRA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GUF', 'SUR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GUY', 'BRA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GUY', 'SUR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('GUY', 'VEN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('HKG', 'CHN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('HND', 'GTM')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('HND', 'SLV')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('HND', 'NIC')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('HRV', 'BIH')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('HRV', 'HUN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('HRV', 'MNE')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('HRV', 'SRB')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('HRV', 'SVN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('HTI', 'DOM')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('HUN', 'AUT')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('HUN', 'HRV')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('HUN', 'ROU')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('HUN', 'SRB')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('HUN', 'SVK')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('HUN', 'SVN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('HUN', 'UKR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('IDN', 'TLS')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('IDN', 'MYS')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('IDN', 'PNG')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('IND', 'AFG')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('IND', 'BGD')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('IND', 'BTN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('IND', 'MMR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('IND', 'CHN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('IND', 'NPL')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('IND', 'PAK')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('IND', 'LKA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('IRL', 'GBR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('IRN', 'AFG')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('IRN', 'ARM')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('IRN', 'AZE')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('IRN', 'IRQ')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('IRN', 'PAK')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('IRN', 'TUR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('IRN', 'TKM')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('IRQ', 'IRN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('IRQ', 'JOR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('IRQ', 'KWT')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('IRQ', 'SAU')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('IRQ', 'SYR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('IRQ', 'TUR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ISR', 'EGY')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ISR', 'JOR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ISR', 'LBN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ISR', 'SYR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ITA', 'AUT')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ITA', 'FRA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ITA', 'SMR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ITA', 'SVN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ITA', 'CHE')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ITA', 'VAT')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('JOR', 'IRQ')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('JOR', 'ISR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('JOR', 'SAU')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('JOR', 'SYR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('KAZ', 'CHN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('KAZ', 'KGZ')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('KAZ', 'RUS')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('KAZ', 'TKM')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('KAZ', 'UZB')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('KEN', 'ETH')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('KEN', 'SOM')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('KEN', 'SSD')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('KEN', 'TZA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('KEN', 'UGA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('KGZ', 'CHN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('KGZ', 'KAZ')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('KGZ', 'TJK')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('KGZ', 'UZB')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('KHM', 'LAO')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('KHM', 'THA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('KHM', 'VNM')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('KOR', 'PRK')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('UNK', 'ALB')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('UNK', 'MKD')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('UNK', 'MNE')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('UNK', 'SRB')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('KWT', 'IRQ')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('KWT', 'SAU')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('LAO', 'MMR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('LAO', 'KHM')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('LAO', 'CHN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('LAO', 'THA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('LAO', 'VNM')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('LBN', 'ISR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('LBN', 'SYR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('LBR', 'GIN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('LBR', 'CIV')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('LBR', 'SLE')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('LBY', 'DZA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('LBY', 'TCD')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('LBY', 'EGY')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('LBY', 'NER')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('LBY', 'SDN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('LBY', 'TUN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('LIE', 'AUT')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('LIE', 'CHE')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('LKA', 'IND')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('LSO', 'ZAF')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('LTU', 'BLR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('LTU', 'LVA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('LTU', 'POL')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('LTU', 'RUS')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('LUX', 'BEL')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('LUX', 'FRA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('LUX', 'DEU')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('LVA', 'BLR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('LVA', 'EST')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('LVA', 'LTU')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('LVA', 'RUS')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MAC', 'CHN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MAF', 'SXM')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MAR', 'DZA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MAR', 'ESH')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MAR', 'ESP')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MCO', 'FRA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MDA', 'ROU')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MDA', 'UKR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MEX', 'BLZ')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MEX', 'GTM')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MEX', 'USA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MKD', 'ALB')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MKD', 'BGR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MKD', 'GRC')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MKD', 'KOS')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MKD', 'SRB')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MLI', 'DZA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MLI', 'BFA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MLI', 'GIN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MLI', 'CIV')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MLI', 'MRT')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MLI', 'NER')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MLI', 'SEN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MMR', 'BGD')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MMR', 'CHN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MMR', 'IND')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MMR', 'LAO')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MMR', 'THA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MNE', 'ALB')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MNE', 'BIH')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MNE', 'HRV')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MNE', 'KOS')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MNE', 'SRB')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MNG', 'CHN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MNG', 'RUS')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MOZ', 'MWI')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MOZ', 'ZAF')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MOZ', 'SWZ')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MOZ', 'TZA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MOZ', 'ZMB')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MOZ', 'ZWE')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MRT', 'DZA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MRT', 'MLI')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MRT', 'SEN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MRT', 'ESH')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MWI', 'MOZ')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MWI', 'TZA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MWI', 'ZMB')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MYS', 'BRN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MYS', 'IDN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('MYS', 'THA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('NAM', 'AGO')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('NAM', 'BWA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('NAM', 'ZAF')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('NAM', 'ZMB')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+160313 14:25:49	   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('NER', 'DZA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('NER', 'BEN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('NER', 'BFA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('NER', 'TCD')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('NER', 'LBY')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('NER', 'MLI')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('NER', 'NGA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('NGA', 'BEN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('NGA', 'CMR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('NGA', 'TCD')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('NGA', 'NER')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('NIC', 'CRI')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('NIC', 'HND')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('NLD', 'BEL')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('NLD', 'DEU')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('NOR', 'FIN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('NOR', 'SWE')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('NOR', 'RUS')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('NPL', 'CHN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('NPL', 'IND')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('OMN', 'SAU')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('OMN', 'ARE')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('OMN', 'YEM')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('PAK', 'AFG')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('PAK', 'CHN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('PAK', 'IND')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('PAK', 'IRN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('PAN', 'COL')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('PAN', 'CRI')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('PER', 'BOL')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('PER', 'BRA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('PER', 'CHL')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('PER', 'COL')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('PER', 'ECU')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('PNG', 'IDN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('POL', 'BLR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('POL', 'CZE')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('POL', 'DEU')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('POL', 'LTU')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('POL', 'RUS')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('POL', 'SVK')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('POL', 'UKR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('PRK', 'CHN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('PRK', 'KOR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('PRK', 'RUS')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('PRT', 'ESP')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('PRY', 'ARG')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('PRY', 'BOL')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('PRY', 'BRA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('PSE', 'ISR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('PSE', 'EGY')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('PSE', 'JOR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('QAT', 'SAU')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ROU', 'BGR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ROU', 'HUN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ROU', 'MDA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ROU', 'SRB')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ROU', 'UKR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('RUS', 'AZE')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('RUS', 'BLR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('RUS', 'CHN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('RUS', 'EST')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('RUS', 'FIN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('RUS', 'GEO')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('RUS', 'KAZ')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('RUS', 'PRK')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('RUS', 'LVA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('RUS', 'LTU')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('RUS', 'MNG')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('RUS', 'NOR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('RUS', 'POL')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('RUS', 'UKR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('RWA', 'BDI')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('RWA', 'COD')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('RWA', 'TZA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('RWA', 'UGA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SAU', 'IRQ')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SAU', 'JOR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SAU', 'KWT')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SAU', 'OMN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SAU', 'QAT')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SAU', 'ARE')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SAU', 'YEM')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SDN', 'CAF')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SDN', 'TCD')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SDN', 'EGY')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SDN', 'ERI')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SDN', 'ETH')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SDN', 'LBY')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SDN', 'SSD')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SEN', 'GMB')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SEN', 'GIN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SEN', 'GNB')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SEN', 'MLI')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SEN', 'MRT')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SLE', 'GIN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SLE', 'LBR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SLV', 'GTM')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SLV', 'HND')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SMR', 'ITA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SOM', 'DJI')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SOM', 'ETH')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SOM', 'KEN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SRB', 'BIH')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SRB', 'BGR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SRB', 'HRV')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SRB', 'HUN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SRB', 'KOS')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SRB', 'MKD')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SRB', 'MNE')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SRB', 'ROU')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SSD', 'CAF')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SSD', 'COD')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SSD', 'ETH')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SSD', 'KEN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SSD', 'SDN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SSD', 'UGA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SUR', 'BRA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SUR', 'GUF')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SUR', 'GUY')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SVK', 'AUT')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SVK', 'CZE')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SVK', 'HUN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SVK', 'POL')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SVK', 'UKR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SVN', 'AUT')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SVN', 'HRV')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SVN', 'ITA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SVN', 'HUN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SWE', 'FIN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SWE', 'NOR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SWZ', 'MOZ')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SWZ', 'ZAF')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SXM', 'MAF')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SYR', 'IRQ')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SYR', 'ISR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SYR', 'JOR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SYR', 'LBN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('SYR', 'TUR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TCD', 'CMR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TCD', 'CAF')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TCD', 'LBY')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TCD', 'NER')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TCD', 'NGA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TCD', 'SSD')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TGO', 'BEN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TGO', 'BFA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TGO', 'GHA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('THA', 'MMR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('THA', 'KHM')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('THA', 'LAO')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('THA', 'MYS')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TJK', 'AFG')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TJK', 'CHN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TJK', 'KGZ')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TJK', 'UZB')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TKM', 'AFG')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TKM', 'IRN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TKM', 'KAZ')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TKM', 'UZB')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TLS', 'IDN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TUN', 'DZA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TUN', 'LBY')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TUR', 'ARM')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TUR', 'AZE')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TUR', 'BGR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TUR', 'GEO')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TUR', 'GRC')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TUR', 'IRN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TUR', 'IRQ')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TUR', 'SYR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TZA', 'BDI')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TZA', 'COD')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TZA', 'KEN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TZA', 'MWI')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TZA', 'MOZ')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TZA', 'RWA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TZA', 'UGA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('TZA', 'ZMB')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('UGA', 'COD')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('UGA', 'KEN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('UGA', 'RWA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('UGA', 'SSD')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('UGA', 'TZA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('UKR', 'BLR')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('UKR', 'HUN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('UKR', 'MDA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('UKR', 'POL')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('UKR', 'ROU')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('UKR', 'RUS')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('UKR', 'SVK')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('URY', 'ARG')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('URY', 'BRA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('USA', 'CAN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('USA', 'MEX')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('UZB', 'AFG')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('UZB', 'KAZ')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('UZB', 'KGZ')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('UZB', 'TJK')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('UZB', 'TKM')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('VAT', 'ITA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('VEN', 'BRA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('VEN', 'COL')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('VEN', 'GUY')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('VNM', 'KHM')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('VNM', 'CHN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('VNM', 'LAO')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('YEM', 'OMN')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('YEM', 'SAU')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ZAF', 'BWA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ZAF', 'LSO')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ZAF', 'MOZ')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ZAF', 'NAM')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ZAF', 'SWZ')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ZAF', 'ZWE')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ZMB', 'AGO')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ZMB', 'BWA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ZMB', 'COD')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ZMB', 'MWI')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ZMB', 'MOZ')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ZMB', 'NAM')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ZMB', 'TZA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ZMB', 'ZWE')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ZWE', 'BWA')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ZWE', 'MOZ')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ZWE', 'ZAF')
+		   45 Prepare	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES (?, ?)
+		   45 Close stmt	
+		   45 Execute	INSERT INTO Borders (countryCode, borderingCountryCode)
+            VALUES ('ZWE', 'ZMB')
+		   45 Close stmt	
+		   45 Quit	

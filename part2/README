@@ -1,0 +1,37 @@
+##############################################
+# Build the countriesAndIntlAffairs database
+# According to the following steps
+##############################################
+
+1)source /part2/5_CreateTable.sql
+  This will create all tables
+  
+2)run insertCountryData.php FIRST. 
+  The following PHP's sequence is NOT fixed.
+  insertConflictsData.php
+  insertBordersData.php
+  insertLanguagesData.php
+  insertLeadersData.php
+  insertRegionData.php
+  insertTradeData.php
+  insertWorldBankStatsData.php
+  This will insert to data to tables
+
+3)use readMigration.py and readTreaty.py
+  to preprocess migration data and treaty data.
+  This will output migration.csv and outTreaty.csv
+  for mysql to load into tables.
+  
+4)source /part2/makeMigrationTable.sql
+  Insert migrations data.
+  Put preprocessed csv migration.csv
+  to /var/tmp/.
+  Also need to chown mysql:root /var/tmp/migration.csv
+  
+5)source /part2/makeTreatiesTable.sql  
+  Insert migrations data.
+  Put preprocessed csv outTreaty.csv
+  to /var/tmp/.
+  Also need to chown mysql:root /var/tmp/outTreaty.csv
+
+
