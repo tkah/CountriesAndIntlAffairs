@@ -9,10 +9,10 @@
 if (!isset($conn)) require_once("db_connection.php");
 include('simple_html_dom.php');
 
+/*
 $file_json = file_get_contents("../db_resources/countries-unescaped.json");
 $file = json_decode($file_json, true);
 foreach ($file as $country) {
-
     $query = $conn->prepare("
         INSERT INTO Countries (countryCode, countryNumber, name, subregion, capital)
         VALUES (:code, :number, :name, :subregion, :capital)
@@ -24,6 +24,7 @@ foreach ($file as $country) {
     $query->bindValue(':capital', $country["capital"], PDO::PARAM_STR);
     $query->execute();
 }
+*/
 
 $dir = new DirectoryIterator(dirname("../db_resources/geos/aa.html"));
 foreach ($dir as $fileinfo) {
@@ -32,7 +33,9 @@ foreach ($dir as $fileinfo) {
 
         $html = file_get_html("../db_resources/geos/" . $fileinfo->getFilename());
         // Name
-        $factbookName = $html->find('h2[sectiontitle=Introduction]', 0)->children(0)->children(0)->innertext;
+        $factbookName = $html->find('h2[sectiontitle=Introduction]', 0)->children(0)->find('span[class=region]', 0)->innertext;
+
+        echo $html->find('h2[sectiontitle=Introduction]', 0)->children(0)->find('span[class=region]', 0) . "<br />";
 
         $query = $conn->prepare("
                       SELECT countryCode
@@ -56,6 +59,7 @@ foreach ($dir as $fileinfo) {
             // Economy
             $factbookEcon = $html->find('h2[sectiontitle=Economy]', 0)->next_sibling()->children(0)->children(0)->children(0)->children(0)->next_sibling()->children(0)->children(0)->innertext;
 
+            /*
             $query = $conn->prepare("
                 UPDATE Countries SET
                 factbookCode = :f_code,
@@ -73,6 +77,7 @@ foreach ($dir as $fileinfo) {
             $query->bindValue(':economy', $factbookEcon, PDO::PARAM_STR);
             $query->bindValue(':p_code', $p_code, PDO::PARAM_STR);
             $query->execute();
+            */
         }
     }
 }

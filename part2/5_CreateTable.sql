@@ -100,5 +100,5 @@ CREATE TABLE WorldBankStats (
     countryCode VARCHAR(3),
     statType VARCHAR(30),
     year VARCHAR(4),
-    amount VARCHAR(100),
+    amount FLOAT(100),
     PRIMARY KEY (countryCode, statType, year));
