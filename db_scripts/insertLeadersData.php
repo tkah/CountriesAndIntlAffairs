@@ -9,9 +9,11 @@
 if (!isset($conn)) require_once("db_connection.php");
 include('simple_html_dom.php');
 
-<<<<<<< HEAD:db_scripts/makeLeadersTables.php
 //1.drop existing table
 $sql = "DROP TABLE if exists Leaders";
+$conn->exec($sql);
+
+$sql = "DROP TABLE if exists LeaderOf";
 $conn->exec($sql);
 
 //2.create table Leaders
@@ -35,8 +37,6 @@ $sql = "CREATE TABLE LeaderOf (
 // use exec() because no results are returned
 $conn->exec($sql);
 
-=======
->>>>>>> b2a89c6697317b210c4ccb09602bf260be1b71dd:db_scripts/insertLeadersData.php
 $dir = new DirectoryIterator(dirname("../db_resources/geos/aa.html"));
 foreach ($dir as $fileinfo) {
     if (!$fileinfo->isDot()) {
