@@ -9,6 +9,7 @@ if (!isset($conn)) require_once("db_connection.php");
 $csvFile = file("../db_resources/population.csv");
 for ($i = 1; $i < sizeof($csvFile); $i++) {
     //$data[] = str_getcsv($line);
+    
     $contents = explode(",", $csvFile[$i]);
 
     $query = $conn->prepare("
@@ -16,7 +17,7 @@ for ($i = 1; $i < sizeof($csvFile); $i++) {
           FROM Countries
           WHERE name = :p_name
         ");
-
+    
     $query->bindValue(':p_name', utf8_encode($contents[0]), PDO::PARAM_STR);
     $query->execute();
     $c_code = $query->fetchAll(PDO::FETCH_ASSOC);
@@ -25,7 +26,6 @@ for ($i = 1; $i < sizeof($csvFile); $i++) {
         $name = $c_code[0]['countryCode'];
 
         $year = 2005;
-
         foreach ($contents as $key => $value) {
             if ($key == 0) continue;
             if ($value == "..") {
@@ -36,13 +36,13 @@ for ($i = 1; $i < sizeof($csvFile); $i++) {
                 INSERT INTO WorldBankStats (countryCode, statType, year, amount)
                 VALUES (:code, 'population', :year, :amt)
             ");
-
             $query->bindValue(':code', $name, PDO::PARAM_STR);
             $query->bindValue(':year', $year, PDO::PARAM_STR);
             $query->bindValue(':amt', $value, PDO::PARAM_STR);
             $query->execute();
 
             $year += 1;
+            
         }
     }
 }

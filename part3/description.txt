@@ -1,0 +1,24 @@
+#===================================================================
+#This document shows following queries 
+#===================================================================
+#1) A GENERAL query to get all countries by name (GENERAL, ORDER BY)
+
+#2) A GENERAL query about All countries where English is spoken (GENERAL, ORDER BY)
+
+#3) A GENERAL query on all countries' name that border China
+
+#4) A JOIN query, Total Countries Involved in Each Conflict (3-WAY JOIN, GROUP BY) 
+    [ConflictParties filtered to just countries by JOIN]
+
+#5) A JOIN query, replace CountryCode in Migrations instead of CountryNumber (3-WAY JOIN, use Countries twice)
+
+#6) A UNION query, take UNION of the Countries participated in both Biological and Chemical Weapons Conventions.
+
+#7) A GROUP BY query, ask the number of countries within each region (GROUP BY, AGGREGATE)
+
+#8) A GROUP BY query, get Countries with Leaders and order by Leader's name (3-WAY JOIN, ORDER BY)
+
+#9) A DISTINCT query, get Trade between Regions (DISTINCT region pairs)
+
+#10) A AGGREGATE query on Country name with greatest population (AGGREGATE)
+

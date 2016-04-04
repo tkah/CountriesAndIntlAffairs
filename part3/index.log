@@ -1,0 +1,258 @@
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 59
+Server version: 5.5.43-0ubuntu0.14.04.1-log (Ubuntu)
+
+Copyright (c) 2000, 2015, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Reading history-file /home/c/.mysql_history
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> source index.sql;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+--------------
+SET profiling=1
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+CREATE INDEX IDX_MIG_YEAR ON Migrations(inYear)
+--------------
+
+Query OK, 0 rows affected (0.12 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+--------------
+SELECT A.countryCode destCode,B.countryCode origCode,M.inYear, M.totalAmount
+FROM Migrations M
+INNER JOIN Countries A ON M.destCountry = A.countryNumber
+INNER JOIN Countries B ON M.origCountry = B.countryNumber
+ORDER BY M.inYear
+--------------
+
++----------+----------+--------+-------------+
+| destCode | origCode | inYear | totalAmount |
++----------+----------+--------+-------------+
+| ZAF      | SLE      | 1990   |         384 |
+| LUX      | SVN      | 1990   |          54 |
+...
+| CZE      | DNK      | 2015   |         300 |
+| ZAF      | PRY      | 2015   |         121 |
+| SLV      | ITA      | 2015   |         282 |
+| RUS      | THA      | 2015   |         217 |
++----------+----------+--------+-------------+
+41376 rows in set (0.04 sec)
+
+--------------
+DROP INDEX IDX_MIG_YEAR ON Migrations
+--------------
+
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+--------------
+SELECT A.countryCode destCode,B.countryCode origCode,M.inYear, M.totalAmount
+FROM Migrations M
+INNER JOIN Countries A ON M.destCountry = A.countryNumber
+INNER JOIN Countries B ON M.origCountry = B.countryNumber
+ORDER BY M.inYear
+--------------
+
++----------+----------+--------+-------------+
+| destCode | origCode | inYear | totalAmount |
++----------+----------+--------+-------------+
+| BGR      | QAT      | 1990   |           2 |
+| CHL      | POL      | 1990   |         465 |
+| LTU      | PAK      | 1990   |          35 |
+...
+| PYF      | DZA      | 2015   |         681 |
+| RUS      | BDI      | 2015   |         131 |
+| ITA      | COM      | 2015   |          37 |
+| VEN      | IDN      | 2015   |          59 |
++----------+----------+--------+-------------+
+41376 rows in set (0.07 sec)
+
+--------------
+CREATE INDEX IDX_WBS_AMT ON WorldBankStats(amount)
+--------------
+
+Query OK, 0 rows affected (0.10 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+--------------
+SELECT substr(name,1,20) as countryName 
+FROM Countries c 
+INNER JOIN WorldBankStats wbs ON wbs.countryCode = c.countryCode 
+WHERE wbs.statType = 'population'
+AND wbs.amount = (SELECT MAX(amount) FROM WorldBankStats WHERE statType = 'population')
+--------------
+
++-------------+
+| countryName |
++-------------+
+| China       |
++-------------+
+1 row in set (0.00 sec)
+
+--------------
+DROP INDEX IDX_WBS_AMT ON WorldBankStats
+--------------
+
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+--------------
+SELECT substr(name,1,20) as countryName 
+FROM Countries c 
+INNER JOIN WorldBankStats wbs ON wbs.countryCode = c.countryCode 
+WHERE wbs.statType = 'population'
+AND wbs.amount = (SELECT MAX(amount) FROM WorldBankStats WHERE statType = 'population')
+--------------
+
++-------------+
+| countryName |
++-------------+
+| China       |
++-------------+
+1 row in set (0.00 sec)
+
+--------------
+CREATE INDEX IDX_TRW_TTL ON TradesWith(total)
+--------------
+
+Query OK, 0 rows affected (0.05 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+--------------
+SELECT DISTINCT R1.region, R2.region, T.type, SUM(T.total)
+FROM TradesWith T
+INNER JOIN Countries C1 ON T.countryCode = C1.countryCode
+INNER JOIN Countries C2 ON T.partnerCountryCode = C2.countryCode
+INNER JOIN Regions R1 ON C1.subregion = R1.subRegion
+INNER JOIN Regions R2 ON C2.subregion = R2.subRegion
+WHERE R1.region < R2.region
+GROUP BY R1.region, R2.region, type
+--------------
+
++----------+----------+--------+--------------------+
+| region   | region   | type   | SUM(T.total)       |
++----------+----------+--------+--------------------+
+| Africa   | Americas | Export |            7865.48 |
+| Africa   | Americas | Import |            8624.93 |
+| Africa   | Asia     | Export | 25165.120000000003 |
+| Africa   | Asia     | Import |  62209.37000000001 |
+| Africa   | Europe   | Export | 51772.549999999996 |
+| Africa   | Europe   | Import |           38168.57 |
+| Africa   | Oceania  | Export |                  0 |
+| Africa   | Oceania  | Import |                  0 |
+| Americas | Asia     | Export | 319135.17000000004 |
+| Americas | Asia     | Import |          852324.09 |
+| Americas | Europe   | Export |           94622.89 |
+| Americas | Europe   | Import | 172847.31999999998 |
+| Americas | Oceania  | Export |                  0 |
+| Asia     | Europe   | Export | 160956.97999999998 |
+| Asia     | Europe   | Import |           66322.33 |
+| Asia     | Oceania  | Export |             795.49 |
+| Asia     | Oceania  | Import |           48320.88 |
+| Europe   | Oceania  | Import |                  0 |
++----------+----------+--------+--------------------+
+18 rows in set (0.00 sec)
+
+--------------
+DROP INDEX IDX_TRW_TTL ON TradesWith
+--------------
+
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+--------------
+SELECT DISTINCT R1.region, R2.region, T.type, SUM(T.total)
+FROM TradesWith T
+INNER JOIN Countries C1 ON T.countryCode = C1.countryCode
+INNER JOIN Countries C2 ON T.partnerCountryCode = C2.countryCode
+INNER JOIN Regions R1 ON C1.subregion = R1.subRegion
+INNER JOIN Regions R2 ON C2.subregion = R2.subRegion
+WHERE R1.region < R2.region
+GROUP BY R1.region, R2.region, type
+--------------
+
++----------+----------+--------+--------------------+
+| region   | region   | type   | SUM(T.total)       |
++----------+----------+--------+--------------------+
+| Africa   | Americas | Export |            7865.48 |
+| Africa   | Americas | Import |            8624.93 |
+| Africa   | Asia     | Export | 25165.120000000003 |
+| Africa   | Asia     | Import |  62209.37000000001 |
+| Africa   | Europe   | Export | 51772.549999999996 |
+| Africa   | Europe   | Import |           38168.57 |
+| Africa   | Oceania  | Export |                  0 |
+| Africa   | Oceania  | Import |                  0 |
+| Americas | Asia     | Export | 319135.17000000004 |
+| Americas | Asia     | Import |          852324.09 |
+| Americas | Europe   | Export |           94622.89 |
+| Americas | Europe   | Import | 172847.31999999998 |
+| Americas | Oceania  | Export |                  0 |
+| Asia     | Europe   | Export | 160956.97999999998 |
+| Asia     | Europe   | Import |           66322.33 |
+| Asia     | Oceania  | Export |             795.49 |
+| Asia     | Oceania  | Import |           48320.88 |
+| Europe   | Oceania  | Import |                  0 |
++----------+----------+--------+--------------------+
+18 rows in set (0.01 sec)
+
+--------------
+SHOW PROFILES
+--------------
+
++----------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Query_ID | Duration   | Query                                                                                                                                                                                                                                                                                                        |
++----------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|        1 | 0.12607500 | CREATE INDEX IDX_MIG_YEAR ON Migrations(inYear)                                                                                                                                                                                                                                                              |
+|        2 | 0.03985200 | SELECT A.countryCode destCode,B.countryCode origCode,M.inYear, M.totalAmount
+FROM Migrations M
+INNER JOIN Countries A ON M.destCountry = A.countryNumber
+INNER JOIN Countries B ON M.origCountry = B.countryNumber
+ORDER BY M.inYear                                                                         |
+|        3 | 0.01585025 | DROP INDEX IDX_MIG_YEAR ON Migrations                                                                                                                                                                                                                                                                        |
+|        4 | 0.07271400 | SELECT A.countryCode destCode,B.countryCode origCode,M.inYear, M.totalAmount
+FROM Migrations M
+INNER JOIN Countries A ON M.destCountry = A.countryNumber
+INNER JOIN Countries B ON M.origCountry = B.countryNumber
+ORDER BY M.inYear                                                                         |
+|        5 | 0.09788000 | CREATE INDEX IDX_WBS_AMT ON WorldBankStats(amount)                                                                                                                                                                                                                                                           |
+|        6 | 0.00166000 | SELECT substr(name,1,20) as countryName 
+FROM Countries c 
+INNER JOIN WorldBankStats wbs ON wbs.countryCode = c.countryCode 
+WHERE wbs.statType = 'population'
+AND wbs.amount = (SELECT MAX(amount) FROM WorldBankStats WHERE statType = 'population')                                                       |
+|        7 | 0.00930425 | DROP INDEX IDX_WBS_AMT ON WorldBankStats                                                                                                                                                                                                                                                                     |
+|        8 | 0.00240525 | SELECT substr(name,1,20) as countryName 
+FROM Countries c 
+INNER JOIN WorldBankStats wbs ON wbs.countryCode = c.countryCode 
+WHERE wbs.statType = 'population'
+AND wbs.amount = (SELECT MAX(amount) FROM WorldBankStats WHERE statType = 'population')                                                       |
+|        9 | 0.04763375 | CREATE INDEX IDX_TRW_TTL ON TradesWith(total)                                                                                                                                                                                                                                                                |
+|       10 | 0.00468525 | SELECT DISTINCT R1.region, R2.region, T.type, SUM(T.total)
+FROM TradesWith T
+INNER JOIN Countries C1 ON T.countryCode = C1.countryCode
+INNER JOIN Countries C2 ON T.partnerCountryCode = C2.countryCode
+INNER JOIN Regions R1 ON C1.subregion = R1.subRegion
+INNER JOIN Regions R2 ON C2.subregion = R2.subR |
+|       11 | 0.01090375 | DROP INDEX IDX_TRW_TTL ON TradesWith                                                                                                                                                                                                                                                                         |
+|       12 | 0.00470925 | SELECT DISTINCT R1.region, R2.region, T.type, SUM(T.total)
+FROM TradesWith T
+INNER JOIN Countries C1 ON T.countryCode = C1.countryCode
+INNER JOIN Countries C2 ON T.partnerCountryCode = C2.countryCode
+INNER JOIN Regions R1 ON C1.subregion = R1.subRegion
+INNER JOIN Regions R2 ON C2.subregion = R2.subR |
++----------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+12 rows in set (0.00 sec)
+
+mysql> quit
