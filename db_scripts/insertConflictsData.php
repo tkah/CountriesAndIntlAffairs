@@ -6,9 +6,11 @@
 
 if (!isset($conn)) require_once("db_connection.php");
 
-<<<<<<< HEAD:db_scripts/makeConflictsTables.php
 //1.drop existing table
 $sql = "DROP TABLE if exists Conflicts";
+$conn->exec($sql);
+
+$sql = "DROP TABLE if exists ConflictParties";
 $conn->exec($sql);
 
 //2.create table Conflicts
@@ -26,15 +28,12 @@ $sql = "CREATE TABLE ConflictParties (
     conflictId VARCHAR(10),
     partyName VARCHAR(100),
     side VARCHAR(1),
-    isCountry INT(1),
     PRIMARY KEY (conflictId, partyName)
     )";
 
 // use exec() because no results are returned
 $conn->exec($sql);
 
-=======
->>>>>>> b2a89c6697317b210c4ccb09602bf260be1b71dd:db_scripts/insertConflictsData.php
 $csvFile = file("../db_resources/124920_1ucdpprio-armed-conflict-dataset-v.4-2015.csv");
 
 $sameId = false;
@@ -204,7 +203,6 @@ for ($i = 1; $i < sizeof($csvFile); $i++) {
 
                 $query->bindValue(':c_id', $conflictId, PDO::PARAM_STR);
                 $query->bindValue(':party', utf8_encode($name), PDO::PARAM_STR);
-                $query->bindValue(':isCountry', $isCountry, PDO::PARAM_STR);
                 $query->execute();
             }
         }

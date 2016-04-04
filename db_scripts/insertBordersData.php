@@ -11,7 +11,6 @@ if (!isset($conn)) require_once("db_connection.php");
 $sql = "DROP TABLE if exists Borders";
 $conn->exec($sql);
 
-<<<<<<< HEAD:db_scripts/makeBordersTable.php
 //2.create table Borders
 $sql = "CREATE TABLE Borders (
     countryCode VARCHAR(3),
@@ -22,8 +21,6 @@ $sql = "CREATE TABLE Borders (
 // use exec() because no results are returned
 $conn->exec($sql);
 
-=======
->>>>>>> b2a89c6697317b210c4ccb09602bf260be1b71dd:db_scripts/insertBordersData.php
 $file_json = file_get_contents("../db_resources/countries.json");
 $file = json_decode($file_json, true);
 //$outputf = '/var/tmp/insertBorder.sql';
