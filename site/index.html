@@ -33,7 +33,7 @@
     <!-- Map Container -->
     <div layout="column" layout-gt-sm="row" layout-align="center center">
         <div flex layout-padding>
-            <ui-gmap-google-map center='map.center' zoom='map.zoom' events="map.events">
+            <ui-gmap-google-map center='map.center' zoom='map.zoom' events="map.events" options="map.options">
                 <ui-gmap-search-box template="searchbox.template" events="searchbox.events"></ui-gmap-search-box>
                 <ui-gmap-marker ng-if="isMobile()" coords="map.center" idkey="1"></ui-gmap-marker>
             </ui-gmap-google-map>

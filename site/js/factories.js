@@ -26,6 +26,7 @@
                                     });
                             });
 
+                        /* Return a promise which will force the variable to wait until a response is received from the DB */
                         return deferred.promise;
                     }
                 }

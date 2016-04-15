@@ -2,34 +2,21 @@
     var app = angular.module('appControllers', []);
 
     app
-        .controller('TopCtrl', ['$scope', '$log', '$http', '$window', 'CountryFactory',
-            function ($scope, $log, $http, $window, CountryFactory) {
-                var lat = 37.2838;
-                var long = -94.6693;
+        /* Main controller for application */
+        .controller('TopCtrl', ['$scope', '$log', '$http', '$window', 'CountryFactory', 'uiGmapGoogleMapApi',
+            function ($scope, $log, $http, $window, CountryFactory, uiGmapGoogleMapApi) {
+                /* Where Gmap Centers */
+                var lat = 35.983936;
+                var long = -36.210938;
 
                 $scope.country = {};
 
-                $scope.map = {
-                    center: { latitude: lat, longitude: long },
-                    zoom: 4,
-                    events: {
-                        click: function (mapModel, eventName, originalEventArgs) {
-                            $scope.$apply(function () {
-                                var e = originalEventArgs[0];
-                                var location = {};
-                                location.coords = {};
-                                location.coords.latitude = e.latLng.lat();
-                                location.coords.longitude = e.latLng.lng();
-                                CountryFactory.getCountry(e.latLng)
-                                    .then(function (res) {
-                                        console.log(res.country);
-                                        $scope.country = res.country;
-                                    });
-                            });
-                        }
-                    }
+                /* Simple function to determine if window size is that of a mobile device */
+                $scope.isMobile = function() {
+                    return  $window.innerWidth < 768;
                 };
 
+                /* Configure Gmap search box */
                 var events = {
                     places_changed: function (searchBox) {
                         var place = searchBox.getPlaces();
@@ -43,7 +30,7 @@
                                 "latitude": place[0].geometry.location.lat(),
                                 "longitude": place[0].geometry.location.lng()
                             },
-                            "zoom": 13,
+                            "zoom": 3,
                             events: {
                                 click: function (mapModel, eventName, originalEventArgs) {
                                     $scope.$apply(function () {
@@ -80,11 +67,30 @@
 
                 $scope.searchbox = { template:'partials/templates/searchbox.tpl.html', events:events };
 
-                $scope.isMobile = function() {
-                    return  $window.innerWidth < 768;
-                };
-
-
+                /* Set up google map once the service loads */
+                uiGmapGoogleMapApi.then(function(maps) {
+                    $scope.map = {
+                        center: { latitude: lat, longitude: long },
+                        zoom: 3,
+                        events: {
+                            click: function (mapModel, eventName, originalEventArgs) {
+                                $scope.$apply(function () {
+                                    var e = originalEventArgs[0];
+                                    var location = {};
+                                    location.coords = {};
+                                    location.coords.latitude = e.latLng.lat();
+                                    location.coords.longitude = e.latLng.lng();
+                                    CountryFactory.getCountry(e.latLng)
+                                        .then(function (res) {
+                                            console.log(res.country);
+                                            $scope.country = res.country;
+                                        });
+                                });
+                            }
+                        },
+                        options: {mapTypeId: maps.MapTypeId.HYBRID}
+                    };
+                });
             }
         ])
 
