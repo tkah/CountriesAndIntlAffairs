@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Countries and Intl Affairs</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=yes">
+
+    <link href="css/reset.css" rel="stylesheet" type="text/css" media="all">
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="bower_components/nvd3/build/nv.d3.min.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="css/animations.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/styles.css" rel="stylesheet" type="text/css" media="all">
+
+    <script src="bower_components/angular/angular.min.js" type="text/javascript"></script>
+</head>
+<body ng-controller="TopCtrl">
+
+    <!-- Top Nav/Toolbar -->
+    <md-content>
+        <md-toolbar class="md-hue-2">
+            <div class="md-toolbar-tools">
+                <h2>
+                    <span>Countries and Intl Affairs</span>
+                </h2>
+            </div>
+        </md-toolbar>
+    </md-content>
+
+    <!-- Map Container -->
+    <div layout="column" layout-gt-sm="row" layout-align="center center">
+        <div flex layout-padding>
+            <ui-gmap-google-map center='map.center' zoom='map.zoom' events="map.events">
+                <ui-gmap-search-box template="searchbox.template" events="searchbox.events"></ui-gmap-search-box>
+                <ui-gmap-marker ng-if="isMobile()" coords="map.center" idkey="1"></ui-gmap-marker>
+            </ui-gmap-google-map>
+        </div>
+    </div>
+
+    <!-- General Data -->
+    <div ng-if="country.name" layout="column" layout-gt-sm="row" layout-align="center center">
+        <div layout-padding flex-gt-sm="50">
+            <md-card>
+                <md-card-title>
+                    <span class="md-headline">{{country.name}}:</span>
+                </md-card-title>
+                <md-card-content>
+                    <img ng-src="images/flags/{{country.factbookCode}}-lgflag.gif">
+                    <img ng-src="images/maps/{{country.factbookCode}}-map.gif">
+
+                    <ul id="news-list">
+                        <li ng-if="country.capital">
+                            <span class="country-detail-lbl">Capital</span>: {{country.capital}}
+                        </li>
+                        <li ng-if="country.generalInfo">
+                            <span class="country-detail-lbl">General</span>: {{country.generalInfo}}
+                        </li>
+                    </ul>
+                </md-card-content>
+            </md-card>
+        </div>
+    </div>
+
+
+<script src="bower_components/angular-scroll/angular-scroll.min.js" type="text/javascript"></script>
+<script src="bower_components/angular-aria/angular-aria.min.js"></script>
+<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="bower_components/angular-material/angular-material.min.js"></script>
+<script src="bower_components/angular-fontawesome/dist/angular-fontawesome.min.js"></script>
+<script src="bower_components/lodash/dist/lodash.min.js"></script>
+<script src="bower_components/angular-simple-logger/dist/angular-simple-logger.min.js"></script>
+<script src="bower_components/angular-google-maps/dist/angular-google-maps.min.js"></script>
+<script src="bower_components/d3/d3.min.js"></script>
+<script src="bower_components/nvd3/build/nv.d3.min.js"></script>
+<script src="bower_components/angular-nvd3/dist/angular-nvd3.min.js"></script>
+
+<script src="js/app.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/factories.js"></script>
+<script src="js/directives.js"></script>
+<script src="js/controllers.js"></script>
+</body>
+</html>
