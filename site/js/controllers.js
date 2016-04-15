@@ -41,7 +41,6 @@
                                         location.coords.longitude = e.latLng.lng();
                                         CountryFactory.getCountry(e.latLng)
                                             .then(function (res) {
-                                                console.log(res.country);
                                                 $scope.country = res.country;
                                             });
                                     });
@@ -59,7 +58,6 @@
 
                         CountryFactory.getCountry(place[0].geometry.location)
                             .then(function (res) {
-                                console.log(res.country);
                                 $scope.country = res.country;
                             });
                     }
@@ -82,7 +80,6 @@
                                     location.coords.longitude = e.latLng.lng();
                                     CountryFactory.getCountry(e.latLng)
                                         .then(function (res) {
-                                            console.log(res.country);
                                             $scope.country = res.country;
                                         });
                                 });

@@ -15,13 +15,12 @@
                                 var countryIndex = res.results.length - 1;
                                 var obj = {name: res.results[countryIndex].formatted_address};
 
-                                console.log(obj);
 
                                 // Use country name to get data from DB
                                 $http.post("model/get_country.php", obj, {})
                                     .then(function (res) {
                                         deferred.resolve({
-                                            country: res.data[0]
+                                            country: res.data
                                         });
                                     });
                             });
