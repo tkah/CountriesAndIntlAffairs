@@ -1,0 +1,9 @@
+<div layout="row" layout-align="center center" class="top-container">
+    <div flex>
+        <ui-gmap-google-map center='map.center' zoom='map.zoom' events="map.events" options="map.options">
+            <ui-gmap-search-box template="searchbox.template" events="searchbox.events"></ui-gmap-search-box>
+            <ui-gmap-marker ng-if="isMobile()" coords="map.center" idkey="1"></ui-gmap-marker>
+        </ui-gmap-google-map>
+    </div>
+</div>
+<md-button ng-if="isMobile()" class="md-raised md-primary" type="button" ng-click="getMapCenter()">Get District From Map</md-button>

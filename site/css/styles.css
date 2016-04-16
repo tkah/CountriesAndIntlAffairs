@@ -18,11 +18,34 @@ md-toolbar .md-toolbar-tools h2 {
 .x-ng-cloak {
   display: none !important; }
 
-.angular-google-map-container {
-  height: 250px;
-  width: 100%;
+.top-container, .top-container-buttons {
+  width: 90%;
   margin-left: auto;
   margin-right: auto; }
+
+.top-container-buttons {
+  margin-top: 40px; }
+  .top-container-buttons a {
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    background: #4DAF7C;
+    color: #545454; }
+    .top-container-buttons a div {
+      width: 100%;
+      padding: 20px; }
+    .top-container-buttons a.selected:not(.hover) {
+      box-shadow: inset 0 0 10px #000000;
+      background: #019875;
+      color: white; }
+    .top-container-buttons a:hover {
+      box-shadow: inset 0 0 5px #000000;
+      background: #03A678;
+      color: #dbdbdb; }
+
+.angular-google-map-container {
+  height: 250px;
+  width: 100%; }
 
 .country-detail-lbl {
   font-weight: 700; }
@@ -31,6 +54,7 @@ md-toolbar .md-toolbar-tools h2 {
 @media only screen and (min-width: 768px) {
   .angular-google-map-container {
     height: 400px;
-    width: 90%; } }
+    margin-left: auto;
+    margin-right: auto; } }
 
 /*# sourceMappingURL=styles.css.map */

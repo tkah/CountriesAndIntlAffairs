@@ -3,17 +3,31 @@
 
     app
         /* Main controller for application */
-        .controller('TopCtrl', ['$scope', '$log', '$http', '$window', 'CountryFactory', 'uiGmapGoogleMapApi',
-            function ($scope, $log, $http, $window, CountryFactory, uiGmapGoogleMapApi) {
-                /* Where Gmap Centers */
-                var lat = 35.983936;
-                var long = -36.210938;
-
+        .controller('TopCtrl', ['$scope', '$log', '$http', '$window',
+            function ($scope, $log, $http, $window) {
                 $scope.country = {};
+                $scope.setCountry = function(country) {
+                    $scope.country = country;
+                };
 
                 /* Simple function to determine if window size is that of a mobile device */
                 $scope.isMobile = function() {
                     return  $window.innerWidth < 768;
+                };
+            }
+        ])
+
+        .controller('MapCtrl', ['$scope', 'CountryFactory', 'uiGmapGoogleMapApi',
+            function ($scope, CountryFactory, uiGmapGoogleMapApi) {
+                /* Where Gmap Centers */
+                var lat = 35.983936;
+                var long = -36.210938;
+
+                $scope.getMapCenter = function () {
+                    CountryFactory.getCountry($scope.map.center)
+                        .then(function (res) {
+                            $scope.setCountry(res.country);
+                        });
                 };
 
                 /* Configure Gmap search box */
@@ -35,13 +49,12 @@
                                 click: function (mapModel, eventName, originalEventArgs) {
                                     $scope.$apply(function () {
                                         var e = originalEventArgs[0];
-                                        var location = {};
-                                        location.coords = {};
-                                        location.coords.latitude = e.latLng.lat();
-                                        location.coords.longitude = e.latLng.lng();
-                                        CountryFactory.getCountry(e.latLng)
+                                        var coords = {};
+                                        coords.latitude = e.latLng.lat();
+                                        coords.longitude = e.latLng.lng();
+                                        CountryFactory.getCountry(coords)
                                             .then(function (res) {
-                                                $scope.country = res.country;
+                                                $scope.setCountry(res.country);
                                             });
                                     });
                                 }
@@ -56,9 +69,9 @@
                             }
                         };
 
-                        CountryFactory.getCountry(place[0].geometry.location)
+                        CountryFactory.getCountry($scope.marker.coords)
                             .then(function (res) {
-                                $scope.country = res.country;
+                                $scope.setCountry(res.country);
                             });
                     }
                 };
@@ -74,13 +87,12 @@
                             click: function (mapModel, eventName, originalEventArgs) {
                                 $scope.$apply(function () {
                                     var e = originalEventArgs[0];
-                                    var location = {};
-                                    location.coords = {};
-                                    location.coords.latitude = e.latLng.lat();
-                                    location.coords.longitude = e.latLng.lng();
-                                    CountryFactory.getCountry(e.latLng)
+                                    var coords = {};
+                                    coords.latitude = e.latLng.lat();
+                                    coords.longitude = e.latLng.lng();
+                                    CountryFactory.getCountry(coords)
                                         .then(function (res) {
-                                            $scope.country = res.country;
+                                            $scope.setCountry(res.country);
                                         });
                                 });
                             }
@@ -88,6 +100,11 @@
                         options: {mapTypeId: maps.MapTypeId.HYBRID}
                     };
                 });
+            }
+        ])
+
+        .controller('SearchCtrl', ['$scope', '$log',
+            function ($scope, $log) {
             }
         ])
 

@@ -10,7 +10,7 @@
                         var deferred = $q.defer();
 
                         // First get country name from Google API using lat/long
-                        $http.get("https://maps.googleapis.com/maps/api/geocode/json?latlng=" + coords.lat() + "," + coords.lng() + "&key=AIzaSyD2PfLiCqpDE49yiT-FmAllJ77I-P1TQF0")
+                        $http.get("https://maps.googleapis.com/maps/api/geocode/json?latlng=" + coords.latitude + "," + coords.longitude + "&key=AIzaSyD2PfLiCqpDE49yiT-FmAllJ77I-P1TQF0")
                             .success(function (res) {
                                 var countryIndex = res.results.length - 1;
                                 var obj = {name: res.results[countryIndex].formatted_address};
