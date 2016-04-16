@@ -33,6 +33,26 @@
                 url: "/search",
                 templateUrl: "partials/search.html",
                 controller: "SearchCtrl"
+            })
+            .state('search.conflicts', {
+                url: "/search/conflicts",
+                templateUrl: "partials/search.conflicts.html",
+                controller: "SearchSubCtrl"
+            })
+            .state('search.countries', {
+                url: "/search/countries",
+                templateUrl: "partials/search.countries.html",
+                controller: "SearchSubCtrl"
+            })
+            .state('search.languages', {
+                url: "/search/languages",
+                templateUrl: "partials/search.languages.html",
+                controller: "SearchSubCtrl"
+            })
+            .state('search.treaties', {
+                url: "/search/treaties",
+                templateUrl: "partials/search.treaties.html",
+                controller: "SearchSubCtrl"
             });
     }])
 })( angular );

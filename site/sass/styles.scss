@@ -13,7 +13,16 @@ md-toolbar .md-toolbar-tools h2 { font-weight: 700; font-size: 1.8em; }
   display: none !important;
 }
 
-.top-container { width: 90%; margin-left: auto; margin-right: auto; }
+.top-container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+
+  .list-by-attr {
+    height: 100px;
+    border: 1px solid black;
+  }
+}
 .top-container-buttons {
   @extend .top-container;
 
@@ -44,7 +53,7 @@ md-toolbar .md-toolbar-tools h2 { font-weight: 700; font-size: 1.8em; }
     }
   }
 }
-.angular-google-map-container { height: 250px; width: 100%; }
+.angular-google-map-container { height: 300px; width: 100%; }
 .country-detail-lbl { font-weight: 700; }
 
 /* Medium Devices, Desktops */

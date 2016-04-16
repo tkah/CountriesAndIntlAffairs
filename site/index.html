@@ -46,14 +46,14 @@
 
     <div ui-view></div>
 
-    <div ng-cloak ng-if="country.name">
+    <div ng-if="country.name" id="country-info" ng-cloak>
 
         <!-- General Data -->
         <div layout="column" layout-gt-sm="row" layout-align="center center">
             <div layout-padding flex-gt-sm="50">
                 <md-card>
                     <md-card-title>
-                        <span class="md-headline">{{country.name}} {{country.region}}:</span>
+                        <span class="md-headline">{{country.name}}:</span>
                     </md-card-title>
                     <md-card-content>
                         <img ng-src="images/flags/{{country.factbookCode}}-lgflag.gif">

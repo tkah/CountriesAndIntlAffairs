@@ -3,16 +3,23 @@
 
     app
         /* Main controller for application */
-        .controller('TopCtrl', ['$scope', '$log', '$http', '$window',
-            function ($scope, $log, $http, $window) {
+        .controller('TopCtrl', ['$scope', '$log', '$http', '$window', '$document',
+            function ($scope, $log, $http, $window, $document) {
                 $scope.country = {};
+
                 $scope.setCountry = function(country) {
                     $scope.country = country;
+                    $scope.toCountryInfo();
                 };
 
                 /* Simple function to determine if window size is that of a mobile device */
                 $scope.isMobile = function() {
-                    return  $window.innerWidth < 768;
+                    return $window.innerWidth < 768;
+                };
+
+                $scope.toCountryInfo = function() {
+                    var countryInfo = angular.element(document.getElementById('country-info'));
+                    $document.duScrollToElement(countryInfo, 0, 800);
                 };
             }
         ])
