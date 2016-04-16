@@ -42,7 +42,6 @@ md-toolbar .md-toolbar-tools h2 {
       background: #019875;
       color: white; }
     .top-container-buttons a:hover {
-      box-shadow: inset 0 0 5px #000000;
       background: #03A678;
       color: #dbdbdb; }
 
