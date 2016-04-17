@@ -80,9 +80,10 @@ foreach ($countries as $country) {
         SELECT SUM(totalAmount) as 'total'
         FROM Migrations
         WHERE destCountry = :c_num
-        AND inYear = '2015'
+        AND inYear = (select max(inYear) from Migrations where destCountry= :c_num2);
     ");
     $query->bindValue(':c_num', $country['countryNumber'], PDO::PARAM_STR);
+    $query->bindValue(':c_num2', $country['countryNumber'], PDO::PARAM_STR);
     $query->execute();
     $res = $query->fetchAll(PDO::FETCH_ASSOC);
     if (!empty($res[0])) $c['immigration'] = $res[0]['total'];
@@ -91,9 +92,10 @@ foreach ($countries as $country) {
         SELECT SUM(totalAmount) as 'total'
         FROM Migrations
         WHERE origCountry = :c_num
-        AND inYear = '2015'
+        AND inYear = (select max(inYear) from Migrations where destCountry= :c_num2);
     ");
     $query->bindValue(':c_num', $country['countryNumber'], PDO::PARAM_STR);
+    $query->bindValue(':c_num2', $country['countryNumber'], PDO::PARAM_STR);
     $query->execute();
     $res = $query->fetchAll(PDO::FETCH_ASSOC);
     if (!empty($res[0])) $c['emigration'] = $res[0]['total'];
