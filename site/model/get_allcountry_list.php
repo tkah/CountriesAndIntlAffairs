@@ -10,6 +10,7 @@ $query = $connection->prepare("
     AND c.countryCode = wbs.countryCode
     AND wbs.statType = 'population'
     AND wbs.year = '2014'
+    ORDER BY c.name ASC
 ");
 $query->execute();
 $countries = $query->fetchAll(PDO::FETCH_ASSOC);
@@ -39,7 +40,7 @@ foreach ($countries as $country) {
     $query->bindValue(':c_code', $country['countryCode'], PDO::PARAM_STR);
     $query->execute();
     $res = $query->fetchAll(PDO::FETCH_ASSOC);
-    $c['co2'] = $res[0]['amount'];
+    if (!empty($res[0])) $c['co2'] = $res[0]['amount'];
 
     $query = $connection->prepare("
         SELECT amount
@@ -56,7 +57,7 @@ foreach ($countries as $country) {
     $query->bindValue(':c_code', $country['countryCode'], PDO::PARAM_STR);
     $query->execute();
     $res = $query->fetchAll(PDO::FETCH_ASSOC);
-    $c['expectancy'] = $res[0]['amount'];
+    if (!empty($res[0])) $c['expectancy'] = $res[0]['amount'];
 
     $query = $connection->prepare("
         SELECT amount
@@ -73,39 +74,29 @@ foreach ($countries as $country) {
     $query->bindValue(':c_code', $country['countryCode'], PDO::PARAM_STR);
     $query->execute();
     $res = $query->fetchAll(PDO::FETCH_ASSOC);
-    $c['gdp'] = $res[0]['amount'];
+    if (!empty($res[0])) $c['gdp'] = $res[0]['amount'];
 
     $query = $connection->prepare("
         SELECT SUM(totalAmount) as 'total'
         FROM Migrations
         WHERE destCountry = :c_num
-        AND inYear = (
-          SELECT MAX(inYear)
-          FROM Migrations
-          WHERE destCountry = :c_num2
-        )
+        AND inYear = '2015'
     ");
     $query->bindValue(':c_num', $country['countryNumber'], PDO::PARAM_STR);
-    $query->bindValue(':c_num2', $country['countryNumber'], PDO::PARAM_STR);
     $query->execute();
     $res = $query->fetchAll(PDO::FETCH_ASSOC);
-    $c['immigration'] = $res[0]['total'];
+    if (!empty($res[0])) $c['immigration'] = $res[0]['total'];
 
     $query = $connection->prepare("
         SELECT SUM(totalAmount) as 'total'
         FROM Migrations
         WHERE origCountry = :c_num
-        AND inYear = (
-          SELECT MAX(inYear)
-          FROM Migrations
-          WHERE origCountry = :c_num2
-        )
+        AND inYear = '2015'
     ");
     $query->bindValue(':c_num', $country['countryNumber'], PDO::PARAM_STR);
-    $query->bindValue(':c_num2', $country['countryNumber'], PDO::PARAM_STR);
     $query->execute();
     $res = $query->fetchAll(PDO::FETCH_ASSOC);
-    $c['emigration'] = $res[0]['total'];
+    if (!empty($res[0])) $c['emigration'] = $res[0]['total'];
 
     $arr[] = $c;
 }

@@ -3,8 +3,8 @@
 
     app
         /* Main controller for application */
-        .controller('TopCtrl', ['$scope', '$log', '$http', '$window', '$document',
-            function ($scope, $log, $http, $window, $document) {
+        .controller('TopCtrl', ['$scope', '$log', '$http', '$window', '$document', 'CountryFactory',
+            function ($scope, $log, $http, $window, $document, CountryFactory) {
                 $scope.country = {};
 
                 $scope.setCountry = function(country) {
@@ -21,6 +21,13 @@
                     var countryInfo = angular.element(document.getElementById('country-info'));
                     $document.duScrollToElement(countryInfo, 0, 800);
                 };
+
+                $scope.getCountryInfo = function(name) {
+                    CountryFactory.getCountryByName(name)
+                        .then(function (res) {
+                            $scope.setCountry(res.country);
+                        });
+                };
             }
         ])
 
@@ -31,7 +38,7 @@
                 var long = -36.210938;
 
                 $scope.getMapCenter = function () {
-                    CountryFactory.getCountry($scope.map.center)
+                    CountryFactory.getCountryByCoords($scope.map.center)
                         .then(function (res) {
                             $scope.setCountry(res.country);
                         });
@@ -59,7 +66,7 @@
                                         var coords = {};
                                         coords.latitude = e.latLng.lat();
                                         coords.longitude = e.latLng.lng();
-                                        CountryFactory.getCountry(coords)
+                                        CountryFactory.getCountryByCoords(coords)
                                             .then(function (res) {
                                                 $scope.setCountry(res.country);
                                             });
@@ -76,7 +83,7 @@
                             }
                         };
 
-                        CountryFactory.getCountry($scope.marker.coords)
+                        CountryFactory.getCountryByCoords($scope.marker.coords)
                             .then(function (res) {
                                 $scope.setCountry(res.country);
                             });
@@ -97,7 +104,7 @@
                                     var coords = {};
                                     coords.latitude = e.latLng.lat();
                                     coords.longitude = e.latLng.lng();
-                                    CountryFactory.getCountry(coords)
+                                    CountryFactory.getCountryByCoords(coords)
                                         .then(function (res) {
                                             $scope.setCountry(res.country);
                                         });

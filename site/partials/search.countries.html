@@ -1,28 +1,93 @@
 <div layout="row">
-    <div flex>
+    <div flex id="search-table">
         <table>
             <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Region</th>
-                    <th>Subregion</th>
-                    <th>GovType</th>
-                    <th>Population (2014)</th>
-                    <th>Life Expectancy (2013)</th>
-                    <th>GDP (2014)</th>
-                    <th>CO2 (2011)</th>
-                    <th>Emigration (2015)</th>
-                    <th>Immigration (2015)</th>
-                </tr>
+            <tr>
+                <th ng-click="order('name')">
+                    Name
+                        <span ng-if="predicate == 'name'">
+                            <fa ng-if="!reverse" name="chevron-down"></fa>
+                            <fa ng-if="reverse" name="chevron-up"></fa>
+                        </span>
+                </th>
+                <th ng-click="order('region')">
+                    Region
+                        <span ng-if="predicate == 'region'">
+                            <fa ng-if="!reverse" name="chevron-down"></fa>
+                            <fa ng-if="reverse" name="chevron-up"></fa>
+                        </span>
+                </th>
+                <th ng-click="order('subregion')">
+                    Subregion
+                        <span ng-if="predicate == 'subregion'">
+                            <fa ng-if="!reverse" name="chevron-down"></fa>
+                            <fa ng-if="reverse" name="chevron-up"></fa>
+                        </span>
+                </th>
+                <th ng-click="order('govType')">
+                    GovType
+                        <span ng-if="predicate == 'govType'">
+                            <fa ng-if="!reverse" name="chevron-down"></fa>
+                            <fa ng-if="reverse" name="chevron-up"></fa>
+                        </span>
+                </th>
+                <th ng-click="order('population')">
+                    Population (Million, 2014)
+                        <span ng-if="predicate == 'population'">
+                            <fa ng-if="!reverse" name="chevron-down"></fa>
+                            <fa ng-if="reverse" name="chevron-up"></fa>
+                        </span>
+                </th>
+                <th ng-click="order('expectancy')">
+                    Life Expectancy (2013)
+                        <span ng-if="predicate == 'expectancy'">
+                            <fa ng-if="!reverse" name="chevron-down"></fa>
+                            <fa ng-if="reverse" name="chevron-up"></fa>
+                        </span>
+                </th>
+                <th ng-click="order('gdp')">
+                    GDP (Billion, 2014)
+                        <span ng-if="predicate == 'gdp'">
+                            <fa ng-if="!reverse" name="chevron-down"></fa>
+                            <fa ng-if="reverse" name="chevron-up"></fa>
+                        </span>
+                </th>
+                <th ng-click="order('co2')">
+                    CO2 (2011)
+                        <span ng-if="predicate == 'co2'">
+                            <fa ng-if="!reverse" name="chevron-down"></fa>
+                            <fa ng-if="reverse" name="chevron-up"></fa>
+                        </span>
+                </th>
+                <th ng-click="order('emigration')">
+                    Emigration (Thousand, 2015)
+                        <span ng-if="predicate == 'emigration'">
+                            <fa ng-if="!reverse" name="chevron-down"></fa>
+                            <fa ng-if="reverse" name="chevron-up"></fa>
+                        </span>
+                </th>
+                <th ng-click="order('immigration')">
+                    Immigration (Thousand, 2015)
+                        <span ng-if="predicate == 'immigration'">
+                            <fa ng-if="!reverse" name="chevron-down"></fa>
+                            <fa ng-if="reverse" name="chevron-up"></fa>
+                        </span>
+                </th>
+            </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+            <tr ng-repeat="country in countries | orderBy:predicate:reverse" ng-click="getCountryInfo(country.name)">
+                <td>{{::country.name}}</td>
+                <td>{{::country.region}}</td>
+                <td>{{::country.subregion}}</td>
+                <td class="overflow-td">{{::country.govType}}</td>
+                <td>{{::country.population * .000001 | number: 2}}</td>
+                <td>{{::country.expectancy}}</td>
+                <td>{{::country.gdp * .000000001 | number: 2}}</td>
+                <td>{{::country.co2}}</td>
+                <td>{{::country.emigration * .001 | number: 2}}</td>
+                <td>{{::country.immigration * .001 | number: 2}}</td>
+            </tr>
             </tbody>
         </table>
     </div>

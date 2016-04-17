@@ -1,0 +1,46 @@
+<div layout="row">
+    <div flex id="search-table">
+        <table>
+            <thead>
+            <tr>
+                <th ng-click="order('name')">
+                    Conflict ID
+                        <span ng-if="predicate == 'name'">
+                            <fa ng-if="!reverse" name="chevron-down"></fa>
+                            <fa ng-if="reverse" name="chevron-up"></fa>
+                        </span>
+                </th>
+                <th ng-click="order('region')">
+                    Location
+                        <span ng-if="predicate == 'region'">
+                            <fa ng-if="!reverse" name="chevron-down"></fa>
+                            <fa ng-if="reverse" name="chevron-up"></fa>
+                        </span>
+                </th>
+                <th ng-click="order('subregion')">
+                    Start
+                        <span ng-if="predicate == 'subregion'">
+                            <fa ng-if="!reverse" name="chevron-down"></fa>
+                            <fa ng-if="reverse" name="chevron-up"></fa>
+                        </span>
+                </th>
+                <th ng-click="order('govType')">
+                    End
+                        <span ng-if="predicate == 'govType'">
+                            <fa ng-if="!reverse" name="chevron-down"></fa>
+                            <fa ng-if="reverse" name="chevron-up"></fa>
+                        </span>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="country in countries | orderBy:predicate:reverse" ng-click="getCountryInfo(country.name)">
+                <td>{{::conflict.conflictId}}</td>
+                <td>{{::conflict.location}}</td>
+                <td>{{::conflict.start}}</td>
+                <td>{{::conflict.end}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

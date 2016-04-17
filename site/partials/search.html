@@ -1,9 +1,9 @@
-<div layout="row" class="top-container">
+<div layout="row" class="top-container search-container">
     <div flex="20">
-        <a ui-sref="search.conflicts"><div class="list-by-attr" layout="row" layout-align="center center"><span>Conflicts</span></div></a>
-        <a ui-sref="search.countries"><div class="list-by-attr" layout="row" layout-align="center center"><span>Countries/Territories</span></div></a>
-        <a ui-sref="search.languages"><div class="list-by-attr" layout="row" layout-align="center center"><span>Languages</span></div></a>
-        <a ui-sref="search.treaties"><div class="list-by-attr" layout="row" layout-align="center center"><span>Treaties</span></div></a>
+        <a ui-sref="search.conflicts" class="list-by-anchor" ui-sref-active="selected"><div class="list-by-attr" layout="row" layout-align="center center"><span>Conflicts</span></div></a>
+        <a ui-sref="search.countries" class="list-by-anchor" ui-sref-active="selected"><div class="list-by-attr" layout="row" layout-align="center center"><span>Countries/Territories</span></div></a>
+        <a ui-sref="search.languages" class="list-by-anchor" ui-sref-active="selected"><div class="list-by-attr" layout="row" layout-align="center center"><span>Languages</span></div></a>
+        <a ui-sref="search.treaties" class="list-by-anchor" ui-sref-active="selected"><div class="list-by-attr" layout="row" layout-align="center center"><span>Treaties</span></div></a>
     </div>
     <div flex="80">
         <div ui-view></div>

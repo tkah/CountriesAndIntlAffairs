@@ -6,7 +6,7 @@
         .factory('CountryFactory', ['$http', '$q',
             function ($http, $q) {
                 return {
-                    getCountry: function (coords) {
+                    getCountryByCoords: function (coords) {
                         var deferred = $q.defer();
 
                         // First get country name from Google API using lat/long
@@ -23,6 +23,35 @@
                                             country: res.data
                                         });
                                     });
+                            });
+
+                        /* Return a promise which will force the variable to wait until a response is received from the DB */
+                        return deferred.promise;
+                    },
+                    getCountryByName: function (name) {
+                        var deferred = $q.defer();
+                        var obj = {name: name};
+
+                        // Use country name to get data from DB
+                        $http.post("model/get_country.php", obj, {})
+                            .then(function (res) {
+                                deferred.resolve({
+                                    country: res.data
+                                });
+                            });
+
+                        /* Return a promise which will force the variable to wait until a response is received from the DB */
+                        return deferred.promise;
+                    },
+                    getAllCountries: function () {
+                        var deferred = $q.defer();
+
+                        // Use country name to get data from DB
+                        $http.get("model/get_allcountry_list.php")
+                            .then(function (res) {
+                                deferred.resolve({
+                                    countries: res.data
+                                });
                             });
 
                         /* Return a promise which will force the variable to wait until a response is received from the DB */
