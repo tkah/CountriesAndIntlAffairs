@@ -1,0 +1,39 @@
+<div layout="row">
+    <div flex="40" id="search-table">
+        <table>
+            <thead>
+            <tr>
+                <th ng-click="order('language')">
+                    Language
+                        <span ng-if="predicate == 'language'">
+                            <fa ng-if="!reverse" name="chevron-down"></fa>
+                            <fa ng-if="reverse" name="chevron-up"></fa>
+                        </span>
+                </th>
+                <th ng-click="order('numCountries')">
+                    Number of Countries
+                        <span ng-if="predicate == 'numCountries'">
+                            <fa ng-if="!reverse" name="chevron-down"></fa>
+                            <fa ng-if="reverse" name="chevron-up"></fa>
+                        </span>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="language in languages | orderBy:predicate:reverse" ng-click="showLanguageCountries(language.language)">
+                <td>{{::language.language}}</td>
+                <td>{{::language.numCountries}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div flex="60" id="search-sub-table">
+        <div layout="row">
+            <ul>
+                <li ng-repeat="country in countries" ng-click="getCountryInfo(country.name)">
+                    {{::country.name}} {{::country.percentPop}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -17,6 +17,11 @@
                     return $window.innerWidth < 768;
                 };
 
+                $scope.order = function(predicate) {
+                    $scope.reverse = ($scope.predicate === predicate) ? !$scope.reverse : false;
+                    $scope.predicate = predicate;
+                };
+
                 $scope.toCountryInfo = function() {
                     var countryInfo = angular.element(document.getElementById('country-info'));
                     $document.duScrollToElement(countryInfo, 0, 800);
@@ -119,6 +124,39 @@
 
         .controller('SearchCtrl', ['$scope', '$log',
             function ($scope, $log) {
+            }
+        ])
+
+        .controller('SearchCountriesCtrl', ['$scope', 'countries',
+            function ($scope, countries){
+                $scope.countries = countries.countries;
+            }
+        ])
+
+        .controller('SearchConflictsCtrl', ['$scope', 'conflicts', 'CountryFactory',
+            function ($scope, conflicts, CountryFactory) {
+                $scope.conflicts = conflicts.conflicts;
+
+                $scope.showConflictParties = function (cId) {
+                    CountryFactory.getConflictParties(cId)
+                        .then(function (res) {
+                            $scope.countries = res.countries;
+                        });
+
+                };
+            }
+        ])
+
+        .controller('SearchLanguagesCtrl', ['$scope', 'languages', 'CountryFactory',
+            function ($scope, languages, CountryFactory){
+                $scope.languages = languages.languages;
+
+                $scope.showLanguageCountries = function(cId) {
+                    CountryFactory.getLanguageCountries(cId)
+                        .then(function (res) {
+                            $scope.countries = res.countries;
+                        });
+                };
             }
         ])
 

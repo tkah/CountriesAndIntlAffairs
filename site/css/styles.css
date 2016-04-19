@@ -1,7 +1,8 @@
 /* General Element Styles */
 body {
-  font-size: 1.1em;
-  font-family: 'Lato', sans-serif; }
+  font-size: 1em;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.2em; }
 
 ul {
   list-style-type: none; }
@@ -18,28 +19,28 @@ md-toolbar .md-toolbar-tools h2 {
 .x-ng-cloak {
   display: none !important; }
 
-#search-table {
+#search-table, #search-sub-table {
   overflow-y: scroll;
   height: 400px; }
-  #search-table table {
+  #search-table table, #search-sub-table table {
     table-layout: fixed;
     width: 100%; }
-    #search-table table thead th {
+    #search-table table thead th, #search-sub-table table thead th {
       font-size: .9em;
       padding: 5px;
       font-weight: 700; }
-      #search-table table thead th span {
+      #search-table table thead th span, #search-sub-table table thead th span {
         color: green; }
-    #search-table table tbody tr:nth-child(odd) {
+    #search-table table tbody tr:nth-child(odd), #search-sub-table table tbody tr:nth-child(odd) {
       background: #ededed; }
-    #search-table table tbody tr:nth-child(even) {
+    #search-table table tbody tr:nth-child(even), #search-sub-table table tbody tr:nth-child(even) {
       background: #dbdbdb; }
-    #search-table table tbody tr td {
+    #search-table table tbody tr td, #search-sub-table table tbody tr td {
       line-height: 1.2em;
       font-size: .9em;
       text-align: right;
       padding: 5px; }
-      #search-table table tbody tr td.overflow-td {
+      #search-table table tbody tr td.overflow-td, #search-sub-table table tbody tr td.overflow-td {
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden; }
@@ -82,12 +83,28 @@ md-toolbar .md-toolbar-tools h2 {
       background: #03A678;
       color: #dbdbdb; }
 
+#country-info .info-block {
+  margin: 10px 0; }
+#country-info .country-flag {
+  max-width: 150px;
+  max-height: 150px;
+  float: right; }
+#country-info .country-map {
+  float: left;
+  max-width: 200px;
+  max-height: 200px;
+  margin: 10px; }
+
 .angular-google-map-container {
   height: 300px;
   width: 100%; }
 
 .country-detail-lbl {
   font-weight: 700; }
+
+/* Overrides */
+.md-headline {
+  width: 100%; }
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width: 768px) {

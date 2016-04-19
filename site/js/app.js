@@ -29,39 +29,49 @@
                 templateUrl: "partials/map.html",
                 controller: "MapCtrl"
             })
+
             .state('search', {
                 url: "/search",
                 templateUrl: "partials/search.html",
                 controller: "SearchCtrl"
             })
+
             .state('search.conflicts', {
                 url: "/conflicts",
                 templateUrl: "partials/search.conflicts.html",
-                controller: "SearchSubCtrl"
+                controller: 'SearchConflictsCtrl',
+                resolve: {
+                    conflicts: ['CountryFactory',
+                        function(CountryFactory) {
+                            return CountryFactory.getAllConflicts();
+                        }]
+                }
             })
+
             .state('search.countries', {
                 url: "/countries",
                 templateUrl: "partials/search.countries.html",
-                controller: function($scope, countries){
-                    $scope.predicate = '';
-                    $scope.countries = countries.countries;
-                    $scope.order = function(predicate) {
-                        $scope.reverse = ($scope.predicate === predicate) ? !$scope.reverse : false;
-                        $scope.predicate = predicate;
-                    };
-                },
+                controller: 'SearchCountriesCtrl',
                 resolve: {
                     countries: ['CountryFactory',
                         function(CountryFactory) {
                             return CountryFactory.getAllCountries();
                         }]
-                },
+                }
             })
+
             .state('search.languages', {
                 url: "/languages",
                 templateUrl: "partials/search.languages.html",
-                controller: "SearchSubCtrl"
+                controller: 'SearchLanguagesCtrl',
+                resolve: {
+                    languages: ['CountryFactory',
+                        function(CountryFactory) {
+                            return CountryFactory.getAllLanguages();
+                        }]
+                }
             })
+
             .state('search.treaties', {
                 url: "/treaties",
                 templateUrl: "partials/search.treaties.html",

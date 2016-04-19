@@ -1,5 +1,5 @@
 /* General Element Styles */
-body { font-size: 1.1em; font-family: 'Lato', sans-serif; }
+body { font-size: 1em; font-family: 'Lato', sans-serif; line-height: 1.2em; }
 ul { list-style-type: none; }
 
 md-toolbar .md-toolbar-tools h2 { font-weight: 700; font-size: 1.8em; }
@@ -57,6 +57,11 @@ md-toolbar .md-toolbar-tools h2 { font-weight: 700; font-size: 1.8em; }
       }
     }
   }
+}
+
+#search-sub-table {
+  @extend #search-table;
+
 }
 
 .top-container {
@@ -120,8 +125,28 @@ md-toolbar .md-toolbar-tools h2 { font-weight: 700; font-size: 1.8em; }
     }
   }
 }
+
+#country-info {
+  .info-block { margin: 10px 0; }
+  .country-flag {
+    max-width: 150px;
+    max-height: 150px;
+    float: right;
+  }
+
+  .country-map {
+    float: left;
+    max-width: 200px;
+    max-height: 200px;
+    margin: 10px;
+  }
+}
+
 .angular-google-map-container { height: 300px; width: 100%; }
 .country-detail-lbl { font-weight: 700; }
+
+/* Overrides */
+.md-headline { width: 100%; }
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 768px) {

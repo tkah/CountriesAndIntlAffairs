@@ -6,6 +6,46 @@
         .factory('CountryFactory', ['$http', '$q',
             function ($http, $q) {
                 return {
+                    getAllConflicts: function () {
+                        var deferred = $q.defer();
+
+                        $http.get("model/get_conflicts.php")
+                            .then(function (res) {
+                                deferred.resolve({
+                                    conflicts: res.data
+                                });
+                            });
+
+                        /* Return a promise which will force the variable to wait until a response is received from the DB */
+                        return deferred.promise;
+                    },
+                    getAllCountries: function () {
+                        var deferred = $q.defer();
+
+                        // Use country name to get data from DB
+                        $http.get("model/get_allcountry_list.php")
+                            .then(function (res) {
+                                deferred.resolve({
+                                    countries: res.data
+                                });
+                            });
+
+                        /* Return a promise which will force the variable to wait until a response is received from the DB */
+                        return deferred.promise;
+                    },
+                    getAllLanguages: function () {
+                        var deferred = $q.defer();
+
+                        $http.get("model/get_languages.php")
+                            .then(function (res) {
+                                deferred.resolve({
+                                    languages: res.data
+                                });
+                            });
+
+                        /* Return a promise which will force the variable to wait until a response is received from the DB */
+                        return deferred.promise;
+                    },
                     getCountryByCoords: function (coords) {
                         var deferred = $q.defer();
 
@@ -43,11 +83,27 @@
                         /* Return a promise which will force the variable to wait until a response is received from the DB */
                         return deferred.promise;
                     },
-                    getAllCountries: function () {
+                    getConflictParties: function (cId) {
                         var deferred = $q.defer();
+                        var obj = {cId: cId};
 
-                        // Use country name to get data from DB
-                        $http.get("model/get_allcountry_list.php")
+                        // Use conflict id to get data from DB
+                        $http.post("model/get_conflict_parties.php", obj, {})
+                            .then(function (res) {
+                                deferred.resolve({
+                                    countries: res.data
+                                });
+                            });
+
+                        /* Return a promise which will force the variable to wait until a response is received from the DB */
+                        return deferred.promise;
+                    },
+                    getLanguageCountries: function (lang) {
+                        var deferred = $q.defer();
+                        var obj = {language: lang};
+
+                        // Use conflict id to get data from DB
+                        $http.post("model/get_language_countries.php", obj, {})
                             .then(function (res) {
                                 deferred.resolve({
                                     countries: res.data
