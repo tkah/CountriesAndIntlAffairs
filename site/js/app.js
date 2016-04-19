@@ -75,7 +75,13 @@
             .state('search.treaties', {
                 url: "/treaties",
                 templateUrl: "partials/search.treaties.html",
-                controller: "SearchSubCtrl"
+                controller: "SearchTreatiesCtrl",
+                resolve: {
+                    treaties: ['CountryFactory',
+                        function(CountryFactory) {
+                            return CountryFactory.getAllTreaties();
+                        }]
+                }
             });
     }])
 })( angular );

@@ -46,6 +46,19 @@
                         /* Return a promise which will force the variable to wait until a response is received from the DB */
                         return deferred.promise;
                     },
+                    getAllTreaties: function () {
+                        var deferred = $q.defer();
+
+                        $http.get("model/get_treaties.php")
+                            .then(function (res) {
+                                deferred.resolve({
+                                    treaties: res.data
+                                });
+                            });
+
+                        /* Return a promise which will force the variable to wait until a response is received from the DB */
+                        return deferred.promise;
+                    },
                     getCountryByCoords: function (coords) {
                         var deferred = $q.defer();
 
@@ -104,6 +117,21 @@
 
                         // Use conflict id to get data from DB
                         $http.post("model/get_language_countries.php", obj, {})
+                            .then(function (res) {
+                                deferred.resolve({
+                                    countries: res.data
+                                });
+                            });
+
+                        /* Return a promise which will force the variable to wait until a response is received from the DB */
+                        return deferred.promise;
+                    },
+                    getTreatyCountries: function (num) {
+                        var deferred = $q.defer();
+                        var obj = {treatyNum: num};
+
+                        // Use conflict id to get data from DB
+                        $http.post("model/get_treaty_countries.php", obj, {})
                             .then(function (res) {
                                 deferred.resolve({
                                     countries: res.data

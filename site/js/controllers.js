@@ -160,6 +160,20 @@
             }
         ])
 
+        .controller('SearchTreatiesCtrl', ['$scope', 'treaties', 'CountryFactory',
+            function ($scope, treaties, CountryFactory){
+                $scope.treaties = treaties.treaties;
+
+                $scope.showTreatyCountries = function(treaty) {
+                    $scope.selectedTreaty = treaty;
+                    CountryFactory.getTreatyCountries(treaty.treatyNumber)
+                        .then(function (res) {
+                            $scope.countries = res.countries;
+                        });
+                };
+            }
+        ])
+
         .controller('AdminCtrl', ['$scope', '$log',
             function ($scope, $log) {
             }

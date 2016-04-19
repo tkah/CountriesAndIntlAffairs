@@ -1,0 +1,41 @@
+<div layout="row">
+    <div flex="40" id="search-table">
+        <table>
+            <thead>
+                <tr>
+                    <th ng-click="order('name')">
+                        Name
+                            <span ng-if="predicate == 'name'">
+                                <fa ng-if="!reverse" name="chevron-down"></fa>
+                                <fa ng-if="reverse" name="chevron-up"></fa>
+                            </span>
+                    </th>
+                    <th ng-click="order('dateEnforced')">
+                        Date Enforced
+                            <span ng-if="predicate == 'dateEnforced'">
+                                <fa ng-if="!reverse" name="chevron-down"></fa>
+                                <fa ng-if="reverse" name="chevron-up"></fa>
+                            </span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="treaty in treaties | orderBy:predicate:reverse" ng-click="showTreatyCountries(treaty)">
+                    <td>{{::treaty.name}}</td>
+                    <td>{{::treaty.dateEnforced}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div flex="60" id="search-sub-table">
+        <div>
+            {{selectedTreaty.description}}
+        </div>
+        <div><a ng-href="{{selectedTreaty.wikipage}}" target="_blank">{{selectedTreaty.wikipage}}</a></div>
+        <ul>
+            <li ng-repeat="country in countries" ng-click="getCountryInfo(country.name)">
+                {{::country.name}}
+            </li>
+        </ul>
+    </div>
+</div>
