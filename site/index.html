@@ -167,6 +167,14 @@
                 </md-card-title>
                 <md-card-content>
                     <!-- Content goes here -->
+                    <div class="info-block">
+                        <span class="country-detail-lbl">TOP10 Immigrants Countries</span>:
+                        <ul>
+                            <li ng-repeat="c in country.immigrants">
+                                {{c.origCtry}}, {{c.ttlAmt}}
+                            </li>
+                        </ul>
+                    </div>
 
 
                 </md-card-content>
