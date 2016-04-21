@@ -38,7 +38,32 @@
                     }
                 };
 
+                $scope.immigrantOptions = {
+                    chart: {
+                        type: 'discreteBarChart',
+                        height: 450,
+                        margin : {
+                            top: 20,
+                            right: 20,
+                            bottom: 50,
+                            left: 55
+                        },
+                        x: function(d){return d.origCtry;},
+                        y: function(d){return d.ttlAmt/1000;},
+                        showValues: true,
+                        duration: 500,
+                        xAxis: {
+                            axisLabel: 'Top 10 Immigrant Countries'
+                        },
+                        yAxis: {
+                            axisLabel: 'Immigrants (thousands)',
+                            axisLabelDistance: -10
+                        }
+                    }
+                };
+
                 $scope.gdpData = [];
+                $scope.immigrantData = [];
 
                 $scope.setCountry = function(country) {
                     $scope.country = country;
@@ -46,6 +71,13 @@
                         {
                             key: $scope.country.name,
                             values: $scope.country.gdp
+                        }
+                    ];
+
+                    $scope.immigrantData = [
+                        {
+                            key: $scope.country.name,
+                            values: $scope.country.immigrants
                         }
                     ];
 
