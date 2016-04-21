@@ -72,8 +72,8 @@
                     </md-card-title>
                     <md-card-content>
                         <div class="info-block">
-                            <span class="country-detail-lbl">Capital</span>:
-                            {{country.capital}}
+                            <span class="country-detail-lbl">Subregion/Region</span>:
+                            {{country.subregion}}/{{country.region}}
                         </div>
 
                         <div class="info-block">
@@ -109,8 +109,35 @@
                     <md-card-title>
                         <span class="md-headline">Government</span>
                     </md-card-title>
-                    <md-card-content>
+                    <md-card-content flex>
                         <!-- Content goes here -->
+                        <div class="info-block">
+                            <span class="country-detail-lbl">Capital</span>:
+                            {{country.capital}}
+                        </div>
+
+                        <div class="info-block">
+                            <span class="country-detail-lbl">Government Type</span>:
+                            {{country.govType}}
+                        </div>
+
+                        <div class="info-block" ng-repeat="leader in country.leaders">
+                            <span class="country-detail-lbl">{{leader.type}}</span>:
+                            {{leader.name}}<br />
+                            <span class="country-detail-lbl">Term Start</span>:
+                            {{leader.termStart}}<br />
+                            <span class="country-detail-lbl">Term End</span>:
+                            {{leader.termEnd}}
+                        </div>
+
+                        <div class="info-block">
+                            <span class="country-detail-lbl">Borders</span>:
+                            <ul>
+                                <li class="country-link" ng-repeat="bc in country.borders" ng-click="getCountryInfo(bc.name)">
+                                    {{bc.name}}
+                                </li>
+                            </ul>
+                        </div>
 
                     </md-card-content>
                 </md-card>
@@ -128,7 +155,14 @@
                     </md-card-title>
                     <md-card-content>
                         <!-- Content goes here -->
+                        <div class="info-block">
+                            <span class="country-detail-lbl">Economy</span>:
+                            {{country.economy}}
+                        </div>
 
+                        <div>
+                            <nvd3 options="gdpOptions" data="gdpData"></nvd3>
+                        </div>
 
                     </md-card-content>
                 </md-card>

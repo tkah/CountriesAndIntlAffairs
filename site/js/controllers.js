@@ -3,12 +3,52 @@
 
     app
         /* Main controller for application */
-        .controller('TopCtrl', ['$scope', '$log', '$http', '$window', '$document', 'CountryFactory',
-            function ($scope, $log, $http, $window, $document, CountryFactory) {
+        .controller('TopCtrl', ['$scope', '$log', '$http', '$window', '$document', 'CountryFactory', '$timeout',
+            function ($scope, $log, $http, $window, $document, CountryFactory, $timeout) {
                 $scope.country = {};
+                $scope.gdpOptions = {
+                    chart: {
+                        type: 'lineChart',
+                        height: 450,
+                        margin : {
+                            top: 20,
+                            right: 20,
+                            bottom: 50,
+                            left: 65
+                        },
+                        x: function(d){ return d.year; },
+                        y: function(d){ return d.amount/1000000; },
+
+                        color: d3.scale.category10().range(),
+                        duration: 300,
+                        useInteractiveGuideline: true,
+                        clipVoronoi: false,
+
+                        xAxis: {
+                            axisLabel: 'Years',
+                            showMaxMin: false,
+                            staggerLabels: true
+                        },
+
+                        yAxis: {
+                            axisLabel: 'GDP (million)',
+                            showMaxMin: false,
+                            axisLabelDistance: 0
+                        }
+                    }
+                };
+
+                $scope.gdpData = [];
 
                 $scope.setCountry = function(country) {
                     $scope.country = country;
+                    $scope.gdpData = [
+                        {
+                            key: $scope.country.name,
+                            values: $scope.country.gdp
+                        }
+                    ];
+
                     $scope.toCountryInfo();
                 };
 
@@ -25,6 +65,7 @@
                 $scope.toCountryInfo = function() {
                     var countryInfo = angular.element(document.getElementById('country-info'));
                     $document.duScrollToElement(countryInfo, 0, 800);
+                    $scope.fetching = false;
                 };
 
                 $scope.getCountryInfo = function(name) {

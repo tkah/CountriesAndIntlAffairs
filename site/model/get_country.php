@@ -49,4 +49,53 @@ $query->execute();
 $immigrants = $query->fetchAll(PDO::FETCH_ASSOC);
 $country['immigrants'] = $immigrants;
 
+/* Get Leaders table data and assign array to country object */
+$query = $connection->prepare("
+SELECT l.*
+FROM Leaders l, LeaderOf lo
+WHERE lo.countryCode = :c_code
+AND lo.leaderName = l.name
+");
+
+$query->bindValue(':c_code', $country['countryCode'], PDO::PARAM_STR);
+$query->execute();
+$leaders = $query->fetchAll(PDO::FETCH_ASSOC);
+$country['leaders'] = $leaders;
+
+/* Get Borders table data and assign array to country object */
+$query = $connection->prepare("
+SELECT c.name
+FROM Borders b, Countries c
+WHERE b.countryCode = :c_code
+AND c.countryCode = b.borderingCountryCode
+ORDER BY c.name
+");
+
+$query->bindValue(':c_code', $country['countryCode'], PDO::PARAM_STR);
+$query->execute();
+$borders = $query->fetchAll(PDO::FETCH_ASSOC);
+$country['borders'] = $borders;
+
+/* Get GDP table data and assign array to country object */
+$query = $connection->prepare("
+SELECT *
+FROM WorldBankStats
+WHERE countryCode = :c_code
+AND statType = 'gdp'
+AND amount <> 0
+ORDER BY year
+");
+
+$query->bindValue(':c_code', $country['countryCode'], PDO::PARAM_STR);
+$query->execute();
+$gdps = $query->fetchAll(PDO::FETCH_ASSOC);
+$country['gdp'] = $gdps;
+
+/*
+foreach ($gdps as $gdp) {
+    $gdpArray = array();
+    $gdpArray[$gdp['year']] = $gdp['amount'];
+    $country['gdp'][] = $gdpArray;
+}*/
+
 echo json_encode($country);

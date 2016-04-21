@@ -45,6 +45,10 @@ md-toolbar .md-toolbar-tools h2 {
         white-space: nowrap;
         overflow: hidden; }
 
+.country-link {
+  color: cornflowerblue;
+  cursor: pointer; }
+
 #search-sub-table {
   margin-top: 5px;
   margin-left: 5px;
@@ -52,9 +56,6 @@ md-toolbar .md-toolbar-tools h2 {
   border: 1px solid black;
   overflow-y: scroll;
   height: 395px; }
-  #search-sub-table .country-link {
-    color: cornflowerblue;
-    cursor: pointer; }
   #search-sub-table .sub-body {
     margin-top: 10px; }
 
