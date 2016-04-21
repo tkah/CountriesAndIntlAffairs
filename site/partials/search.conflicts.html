@@ -34,7 +34,7 @@
             </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="conflict in conflicts | orderBy:predicate:reverse" ng-click="showConflictParties(conflict.conflictId)">
+                <tr ng-repeat="conflict in conflicts | orderBy:predicate:reverse" ng-click="showConflictParties(conflict)">
                     <td>{{::conflict.conflictId}}</td>
                     <td>{{::conflict.location}}</td>
                     <td>{{::conflict.start}}</td>
@@ -43,20 +43,38 @@
             </tbody>
         </table>
     </div>
-    <div flex="50" id="search-sub-table">
-        <div layout="row">
-            <div flex="50">
-                <h4>Side A</h4>
-                <div ng-repeat="c in countries.sideA" >
-                    <span ng-if="c.countryName" ng-click="getCountryInfo(c.countryName)">{{::c.countryName}}</span>
-                    <span ng-if="c.partyName">{{::c.partyName}}</span>
+    <div ng-if="selectedConflict" flex="50" id="search-sub-table">
+        <div layout="column">
+            <div flex class="sub-header">
+                <div>
+                    <span class="country-detail-lbl">Conflict Id</span>: {{selectedConflict.conflictId}}
+                </div>
+                <div>
+                    <span class="country-detail-lbl">Location</span>: {{selectedConflict.location}}
+                </div>
+                <div>
+                    <span class="country-detail-lbl">Start</span>: {{selectedConflict.start}}
+                </div>
+                <div>
+                    <span class="country-detail-lbl">End</span>: {{selectedConflict.end}}
                 </div>
             </div>
-            <div flex="50">
-                <h4>Side B</h4>
-                <div ng-repeat="c in countries.sideB" >
-                    <span ng-if="c.countryName" ng-click="getCountryInfo(c.countryName)">{{::c.countryName}}</span>
-                    <span ng-if="c.partyName">{{::c.partyName}}</span>
+            <div flex class="sub-body">
+                <div layout="row">
+                    <div flex="50">
+                        <h4 class="subcountry-detail-lbl">Side A</h4>
+                        <div ng-repeat="c in countries.sideA" >
+                            <span ng-if="c.countryName" ng-click="getCountryInfo(c.countryName)" class="country-link">{{::c.countryName}}</span>
+                            <span ng-if="c.partyName">{{::c.partyName}}</span>
+                        </div>
+                    </div>
+                    <div flex="50">
+                        <h4 class="subcountry-detail-lbl">Side B</h4>
+                        <div ng-repeat="c in countries.sideB" >
+                            <span ng-if="c.countryName" ng-click="getCountryInfo(c.countryName)" class="country-link">{{::c.countryName}}</span>
+                            <span ng-if="c.partyName">{{::c.partyName}}</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

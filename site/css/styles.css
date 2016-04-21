@@ -19,31 +19,44 @@ md-toolbar .md-toolbar-tools h2 {
 .x-ng-cloak {
   display: none !important; }
 
-#search-table, #search-sub-table {
+#search-table {
   overflow-y: scroll;
   height: 400px; }
-  #search-table table, #search-sub-table table {
+  #search-table table {
     table-layout: fixed;
     width: 100%; }
-    #search-table table thead th, #search-sub-table table thead th {
+    #search-table table thead th {
       font-size: .9em;
       padding: 5px;
       font-weight: 700; }
-      #search-table table thead th span, #search-sub-table table thead th span {
+      #search-table table thead th span {
         color: green; }
-    #search-table table tbody tr:nth-child(odd), #search-sub-table table tbody tr:nth-child(odd) {
+    #search-table table tbody tr:nth-child(odd) {
       background: #ededed; }
-    #search-table table tbody tr:nth-child(even), #search-sub-table table tbody tr:nth-child(even) {
+    #search-table table tbody tr:nth-child(even) {
       background: #dbdbdb; }
-    #search-table table tbody tr td, #search-sub-table table tbody tr td {
+    #search-table table tbody tr td {
       line-height: 1.2em;
       font-size: .9em;
       text-align: right;
       padding: 5px; }
-      #search-table table tbody tr td.overflow-td, #search-sub-table table tbody tr td.overflow-td {
+      #search-table table tbody tr td.overflow-td {
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden; }
+
+#search-sub-table {
+  margin-top: 5px;
+  margin-left: 5px;
+  padding: 5px;
+  border: 1px solid black;
+  overflow-y: scroll;
+  height: 395px; }
+  #search-sub-table .country-link {
+    color: cornflowerblue;
+    cursor: pointer; }
+  #search-sub-table .sub-body {
+    margin-top: 10px; }
 
 .top-container, .top-container-buttons {
   width: 95%;
@@ -99,8 +112,11 @@ md-toolbar .md-toolbar-tools h2 {
   height: 300px;
   width: 100%; }
 
-.country-detail-lbl {
+.country-detail-lbl, .subcountry-detail-lbl {
   font-weight: 700; }
+
+.subcountry-detail-lbl {
+  text-decoration: underline; }
 
 /* Overrides */
 .md-headline {

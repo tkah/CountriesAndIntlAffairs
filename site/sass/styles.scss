@@ -60,8 +60,25 @@ md-toolbar .md-toolbar-tools h2 { font-weight: 700; font-size: 1.8em; }
 }
 
 #search-sub-table {
-  @extend #search-table;
+  margin-top: 5px;
+  margin-left: 5px;
+  padding: 5px;
+  border: 1px solid black;
+  overflow-y: scroll;
+  height: 395px;
 
+  .country-link {
+    color: cornflowerblue;
+    cursor: pointer;
+  }
+
+  .sub-header {
+
+  }
+
+  .sub-body {
+    margin-top: 10px;
+  }
 }
 
 .top-container {
@@ -144,6 +161,10 @@ md-toolbar .md-toolbar-tools h2 { font-weight: 700; font-size: 1.8em; }
 
 .angular-google-map-container { height: 300px; width: 100%; }
 .country-detail-lbl { font-weight: 700; }
+.subcountry-detail-lbl {
+  @extend .country-detail-lbl;
+  text-decoration: underline;
+}
 
 /* Overrides */
 .md-headline { width: 100%; }

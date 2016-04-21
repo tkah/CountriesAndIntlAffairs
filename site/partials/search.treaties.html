@@ -27,15 +27,22 @@
             </tbody>
         </table>
     </div>
-    <div flex="60" id="search-sub-table">
-        <div>
-            {{selectedTreaty.description}}
+    <div ng-if="selectedTreaty" flex="60" id="search-sub-table">
+        <div class="sub-header">
+            <div>
+                <h4 class="subcountry-detail-lbl" style="display: inline;">{{selectedTreaty.name}}</h4>
+                <a ng-href="{{selectedTreaty.wikipage}}" target="_blank"><fa name="wikipedia-w " size="lg"></fa></a>
+            </div>
+            <div>
+                {{selectedTreaty.description}}
+            </div>
         </div>
-        <div><a ng-href="{{selectedTreaty.wikipage}}" target="_blank">{{selectedTreaty.wikipage}}</a></div>
-        <ul>
-            <li ng-repeat="country in countries" ng-click="getCountryInfo(country.name)">
-                {{::country.name}}
-            </li>
-        </ul>
+        <div class="sub-body">
+            <ul>
+                <li ng-repeat="country in countries" class="country-link" ng-click="getCountryInfo(country.name)">
+                    {{::country.name}}
+                </li>
+            </ul>
+        </div>
     </div>
 </div>

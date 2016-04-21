@@ -137,8 +137,9 @@
             function ($scope, conflicts, CountryFactory) {
                 $scope.conflicts = conflicts.conflicts;
 
-                $scope.showConflictParties = function (cId) {
-                    CountryFactory.getConflictParties(cId)
+                $scope.showConflictParties = function (conflict) {
+                    $scope.selectedConflict = conflict;
+                    CountryFactory.getConflictParties(conflict.conflictId)
                         .then(function (res) {
                             $scope.countries = res.countries;
                         });

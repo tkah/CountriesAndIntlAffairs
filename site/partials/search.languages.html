@@ -31,7 +31,7 @@
         <div layout="row">
             <ul>
                 <li ng-repeat="country in countries" ng-click="getCountryInfo(country.name)">
-                    {{::country.name}} {{::country.percentPop}}
+                    <span class="country-link">{{::country.name}}</span> {{::country.percentPop}}
                 </li>
             </ul>
         </div>
