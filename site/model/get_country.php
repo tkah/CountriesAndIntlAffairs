@@ -25,6 +25,7 @@ $query = $connection->prepare("
 SELECT language, percentPop
 FROM LanguagesSpoken
 WHERE countryCode = :c_code
+ORDER BY percentPop
 ");
 
 $query->bindValue(':c_code', $country['countryCode'], PDO::PARAM_STR);
@@ -48,6 +49,23 @@ $query->bindValue(':c_num2', $country['countryNumber'], PDO::PARAM_STR);
 $query->execute();
 $immigrants = $query->fetchAll(PDO::FETCH_ASSOC);
 $country['immigrants'] = $immigrants;
+
+/* Get Migrations table data and assign array to country object */
+$query = $connection->prepare("
+SELECT c.name as destCtry, m.totalAmount as ttlAmt
+FROM Countries c, Migrations m
+WHERE m.origCountry = :c_num
+AND m.destCountry = c.countryNumber
+AND inYear = (select max(inYear) from Migrations where origCountry= :c_num2)
+ORDER BY m.totalAmount desc
+LIMIT 10;
+");
+
+$query->bindValue(':c_num', $country['countryNumber'], PDO::PARAM_STR);
+$query->bindValue(':c_num2', $country['countryNumber'], PDO::PARAM_STR);
+$query->execute();
+$emigrants = $query->fetchAll(PDO::FETCH_ASSOC);
+$country['emigrants'] = $emigrants;
 
 /* Get Leaders table data and assign array to country object */
 $query = $connection->prepare("
@@ -91,11 +109,85 @@ $query->execute();
 $gdps = $query->fetchAll(PDO::FETCH_ASSOC);
 $country['gdp'] = $gdps;
 
-/*
-foreach ($gdps as $gdp) {
-    $gdpArray = array();
-    $gdpArray[$gdp['year']] = $gdp['amount'];
-    $country['gdp'][] = $gdpArray;
-}*/
+/* Get Treaties table data and assign array to country object */
+$query = $connection->prepare("
+SELECT t.*, '1' AS 'isParty'
+FROM Treaties t, TreatyParties tp
+WHERE tp.countryNumber = :c_num
+AND tp.treatyNumber = t.treatyNumber
+UNION
+(SELECT *, '0' AS 'isParty'
+FROM Treaties
+WHERE treatyNumber NOT IN
+(SELECT t.treatyNumber
+FROM Treaties t, TreatyParties tp
+WHERE tp.countryNumber = :c_num2
+AND tp.treatyNumber = t.treatyNumber))
+");
+
+$query->bindValue(':c_num', $country['countryNumber'], PDO::PARAM_STR);
+$query->bindValue(':c_num2', $country['countryNumber'], PDO::PARAM_STR);
+$query->execute();
+$treaties = $query->fetchAll(PDO::FETCH_ASSOC);
+$country['treaties'] = $treaties;
+
+/* Get Conflicts table data and assign array to country object */
+$query = $connection->prepare("
+SELECT c.*
+FROM Conflicts c, ConflictParties cp
+WHERE cp.partyName = :c_code
+AND cp.conflictId = c.conflictId
+ORDER BY c.start
+");
+
+$query->bindValue(':c_code', $country['countryCode'], PDO::PARAM_STR);
+$query->execute();
+$conflicts = $query->fetchAll(PDO::FETCH_ASSOC);
+$country['conflicts'] = $conflicts;
+
+/* Get CO2 table data and assign array to country object */
+$query = $connection->prepare("
+SELECT amount, year
+FROM WorldBankStats
+WHERE countryCode = :c_code
+AND statType = 'co2'
+AND amount > 0
+ORDER BY year
+");
+
+$query->bindValue(':c_code', $country['countryCode'], PDO::PARAM_STR);
+$query->execute();
+$co2 = $query->fetchAll(PDO::FETCH_ASSOC);
+$country['co2'] = $co2;
+
+/* Get population table data and assign array to country object */
+$query = $connection->prepare("
+SELECT amount, year
+FROM WorldBankStats
+WHERE countryCode = :c_code
+AND statType = 'population'
+AND amount > 0
+ORDER BY year
+");
+
+$query->bindValue(':c_code', $country['countryCode'], PDO::PARAM_STR);
+$query->execute();
+$pop = $query->fetchAll(PDO::FETCH_ASSOC);
+$country['population'] = $pop;
+
+/* Get expectancy table data and assign array to country object */
+$query = $connection->prepare("
+SELECT amount, year
+FROM WorldBankStats
+WHERE countryCode = :c_code
+AND statType = 'expectancy'
+AND amount > 0
+ORDER BY year
+");
+
+$query->bindValue(':c_code', $country['countryCode'], PDO::PARAM_STR);
+$query->execute();
+$ex = $query->fetchAll(PDO::FETCH_ASSOC);
+$country['expectancy'] = $ex;
 
 echo json_encode($country);

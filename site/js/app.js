@@ -60,18 +60,6 @@
                 }
             })
 
-            .state('search.languages', {
-                url: "/languages",
-                templateUrl: "partials/search.languages.html",
-                controller: 'SearchLanguagesCtrl',
-                resolve: {
-                    languages: ['CountryFactory',
-                        function(CountryFactory) {
-                            return CountryFactory.getAllLanguages();
-                        }]
-                }
-            })
-
             .state('search.treaties', {
                 url: "/treaties",
                 templateUrl: "partials/search.treaties.html",
@@ -82,6 +70,18 @@
                             return CountryFactory.getAllTreaties();
                         }]
                 }
+            })
+
+            .state('search.languages', {
+                url: "/languages",
+                templateUrl: "partials/search.languages.html",
+                controller: 'SearchLanguagesCtrl',
+                resolve: {
+                    languages: ['CountryFactory',
+                        function(CountryFactory) {
+                            return CountryFactory.getAllLanguages();
+                        }]
+                }
             });
-    }])
+    }]);
 })( angular );

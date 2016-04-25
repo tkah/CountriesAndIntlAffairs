@@ -126,6 +126,21 @@
                         /* Return a promise which will force the variable to wait until a response is received from the DB */
                         return deferred.promise;
                     },
+                    getMigrationRange: function (origCountry, destCountry) {
+                        var deferred = $q.defer();
+                        var obj = {origCountry: origCountry, destCountry: destCountry};
+
+                        // Use conflict id to get data from DB
+                        $http.post("model/get_migration_range.php", obj, {})
+                            .then(function (res) {
+                                deferred.resolve({
+                                    range: res.data
+                                });
+                            });
+
+                        /* Return a promise which will force the variable to wait until a response is received from the DB */
+                        return deferred.promise;
+                    },
                     getTreatyCountries: function (num) {
                         var deferred = $q.defer();
                         var obj = {treatyNum: num};

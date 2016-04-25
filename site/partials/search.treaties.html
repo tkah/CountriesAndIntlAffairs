@@ -1,5 +1,5 @@
 <div layout="row">
-    <div flex="40" id="search-table">
+    <div flex="40" class="search-table">
         <table>
             <thead>
                 <tr>
@@ -22,12 +22,12 @@
             <tbody>
                 <tr ng-repeat="treaty in treaties | orderBy:predicate:reverse" ng-click="showTreatyCountries(treaty)">
                     <td>{{::treaty.name}}</td>
-                    <td>{{::treaty.dateEnforced}}</td>
+                    <td>{{treaty.dateEnforced | dateFilter | date: 'mediumDate'}}</td>
                 </tr>
             </tbody>
         </table>
     </div>
-    <div ng-if="selectedTreaty" flex="60" id="search-sub-table">
+    <div ng-if="selectedTreaty" flex="60" class="search-sub-table">
         <div class="sub-header">
             <div>
                 <h4 class="subcountry-detail-lbl" style="display: inline;">{{selectedTreaty.name}}</h4>

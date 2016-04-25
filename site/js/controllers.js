@@ -3,9 +3,47 @@
 
     app
         /* Main controller for application */
-        .controller('TopCtrl', ['$scope', '$log', '$http', '$window', '$document', 'CountryFactory', '$timeout',
-            function ($scope, $log, $http, $window, $document, CountryFactory, $timeout) {
+        .controller('TopCtrl', ['$scope', '$log', '$http', '$window', '$document', 'CountryFactory', '$timeout', '$state',
+            function ($scope, $log, $http, $window, $document, CountryFactory, $timeout, $state) {
                 $scope.country = {};
+                $scope.statTabs = [
+                    {
+                        tabLabel: 'Immigration',
+                        chartType: 'discreteBarChart',
+                        xLabel: 'Top 10 Immigrant Countries',
+                        yLabel: 'Immigrants (thousands)',
+                        xFunc: function(d){return d.origCtry;},
+                        yFunc: function(d){return d.ttlAmt/1000;}
+                    }, {
+                        tabLabel: 'Emigration',
+                        chartType: 'discreteBarChart',
+                        xLabel: 'Top 10 Emigrant Countries',
+                        yLabel: 'Emigrants (thousands)',
+                        xFunc: function(d){return d.destCtry;},
+                        yFunc: function(d){return d.ttlAmt/1000;}
+                    }, {
+                        tabLabel: 'Population',
+                        chartType: 'lineChart',
+                        xLabel: 'Years',
+                        yLabel: 'Population (thousands)',
+                        xFunc: function(d){return d.year},
+                        yFunc: function(d){return d.amount/1000}
+                    }, {
+                        tabLabel: 'CO2',
+                        chartType: 'lineChart',
+                        xLabel: 'Years',
+                        yLabel: 'CO2 Output (tons?)',
+                        xFunc: function(d){return d.year},
+                        yFunc: function(d){return d.amount}
+                    }, {
+                        tabLabel: 'Life Expectancy',
+                        chartType: 'lineChart',
+                        xLabel: 'Years',
+                        yLabel: 'Life Expectancy (years)',
+                        xFunc: function(d){return d.year},
+                        yFunc: function(d){return d.amount}
+                    }];
+
                 $scope.gdpOptions = {
                     chart: {
                         type: 'lineChart',
@@ -26,8 +64,7 @@
 
                         xAxis: {
                             axisLabel: 'Years',
-                            showMaxMin: false,
-                            staggerLabels: true
+                            showMaxMin: false
                         },
 
                         yAxis: {
@@ -38,7 +75,7 @@
                     }
                 };
 
-                $scope.immigrantOptions = {
+                $scope.statOptions = {
                     chart: {
                         type: 'discreteBarChart',
                         height: 450,
@@ -52,36 +89,130 @@
                         y: function(d){return d.ttlAmt/1000;},
                         showValues: true,
                         duration: 500,
+                        discretebar: {
+                            dispatch: {
+                                elementClick: function (e) {
+                                    console.log("click");
+                                    if ($scope.country.selectedStat == 0) {
+                                        $scope.country.subStatOrigCountry = e.data.origCtry;
+                                        $scope.country.subStatDestCountry = $scope.country.name;
+                                        $scope.country.subStatYLabel = "Immigration to " + $scope.country.subStatDestCountry + " from " + $scope.country.subStatOrigCountry;
+                                    }
+                                    else if ($scope.country.selectedStat == 1) {
+                                        $scope.country.subStatOrigCountry = $scope.country.name;
+                                        $scope.country.subStatDestCountry = e.data.destCtry;
+                                        $scope.country.subStatYLabel = "Emigration from " + $scope.country.subStatOrigCountry + " to " + $scope.country.subStatDestCountry;
+                                    }
+
+                                    CountryFactory.getMigrationRange($scope.country.subStatOrigCountry, $scope.country.subStatDestCountry)
+                                        .then(function (res) {
+                                            $scope.country.selectedSubStat = res.range;
+
+                                            $scope.subStatOptions = {
+                                                chart: {
+                                                    type: 'lineChart',
+                                                    height: 450,
+                                                    margin : {
+                                                        top: 20,
+                                                        right: 20,
+                                                        bottom: 50,
+                                                        left: 65
+                                                    },
+                                                    x: function(d){ return d.inYear; },
+                                                    y: function(d){ return d.totalAmount/1000; },
+                                                    color: d3.scale.category10().range(),
+                                                    duration: 300,
+                                                    useInteractiveGuideline: true,
+                                                    clipVoronoi: false,
+                                                    xAxis: {
+                                                        axisLabel: 'Years',
+                                                        showMaxMin: false
+                                                    },
+
+                                                    yAxis: {
+                                                        axisLabel: $scope.country.subStatYLabel + '(thousand)',
+                                                        showMaxMin: false,
+                                                        axisLabelDistance: 0
+                                                    }
+                                                }
+                                            };
+
+                                            $scope.subStatData = [{
+                                                key: $scope.country.subStatYLabel, values: $scope.country.selectedSubStat
+                                            }];
+                                        });
+                                }
+                            }
+                        },
                         xAxis: {
                             axisLabel: 'Top 10 Immigrant Countries'
                         },
                         yAxis: {
                             axisLabel: 'Immigrants (thousands)',
-                            axisLabelDistance: -10
+                            axisLabelDistance: -5
                         }
                     }
                 };
 
                 $scope.gdpData = [];
-                $scope.immigrantData = [];
+                $scope.statData = [];
+
+                $scope.getStatData = function(index) {
+                    $scope.statOptions.chart.type = $scope.statTabs[index].chartType;
+                    $scope.statOptions.chart.xAxis.axisLabel = $scope.statTabs[index].xLabel;
+                    $scope.statOptions.chart.yAxis.axisLabel = $scope.statTabs[index].yLabel;
+                    $scope.statOptions.chart.yAxis.axisLabel = $scope.statTabs[index].yLabel;
+                    $scope.statOptions.chart.x = $scope.statTabs[index].xFunc;
+                    $scope.statOptions.chart.y = $scope.statTabs[index].yFunc;
+
+                    if (index ==0) {
+                        $scope.statData = [{
+                            key: $scope.country.name, values: $scope.country.immigrants
+                        }];
+                    } else if (index == 1) {
+                        $scope.statData = [{
+                            key: $scope.country.name,
+                            values: $scope.country.emigrants
+                        }];
+                    } else if (index == 2) {
+                        $scope.statData = [{
+                            key: $scope.country.name,
+                            values: $scope.country.population
+                        }];
+                    } else if (index == 3) {
+                        $scope.statData = [{
+                            key: $scope.country.name,
+                            values: $scope.country.co2
+                        }];
+                    } else if (index == 4) {
+                        $scope.statData = [{
+                            key: $scope.country.name,
+                            values: $scope.country.expectancy
+                        }];
+                    }
+                };
 
                 $scope.setCountry = function(country) {
                     $scope.country = country;
-                    $scope.gdpData = [
-                        {
-                            key: $scope.country.name,
-                            values: $scope.country.gdp
-                        }
-                    ];
-
-                    $scope.immigrantData = [
-                        {
-                            key: $scope.country.name,
-                            values: $scope.country.immigrants
-                        }
-                    ];
+                    $scope.country.selectedStat = 0;
 
                     $scope.toCountryInfo();
+
+                    $timeout(function() {
+                        $scope.gdpData = [
+                            {
+                                key: country.name,
+                                values: country.gdp
+                            }
+                        ];
+
+                        $scope.statData = [
+                            {
+                                key: country.name,
+                                values: country.immigrants
+                            }
+                        ];
+                    }, 2000);
                 };
 
                 /* Simple function to determine if window size is that of a mobile device */
@@ -101,9 +232,31 @@
                 };
 
                 $scope.getCountryInfo = function(name) {
+                    $scope.selectedCountryTreaty = null;
+                    $scope.selectedCountryConflict = null;
+                    $scope.conflictCountries = null;
+                    $scope.treatyCountries = null;
+
                     CountryFactory.getCountryByName(name)
                         .then(function (res) {
                             $scope.setCountry(res.country);
+                        });
+                };
+
+                $scope.showCountryConflictParties = function (conflict) {
+                    $scope.selectedCountryConflict = conflict;
+                    CountryFactory.getConflictParties(conflict.conflictId)
+                        .then(function (res) {
+                            $scope.conflictCountries = res.countries;
+                        });
+
+                };
+
+                $scope.showTreatyCoparties = function(treaty) {
+                    $scope.selectedCountryTreaty = treaty;
+                    CountryFactory.getTreatyCountries(treaty.treatyNumber)
+                        .then(function (res) {
+                            $scope.treatyCountries = res.countries;
                         });
                 };
             }

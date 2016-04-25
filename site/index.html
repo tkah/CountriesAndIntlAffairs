@@ -63,40 +63,29 @@
                     - country.languages
                     (possibly make 100% width?)
                 -->
-                <md-card flex-gt-sm="50">
-                    <md-card-title>
-                        <span class="md-headline">
-                            {{country.name}}
-                            <img class="country-flag" ng-src="images/flags/{{country.factbookCode}}-lgflag.gif">
-                        </span>
-                    </md-card-title>
-                    <md-card-content>
-                        <div class="info-block">
-                            <span class="country-detail-lbl">Subregion/Region</span>:
-                            {{country.subregion}}/{{country.region}}
-                        </div>
+                <md-content flex-gt-sm="50" layout="column">
+                    <md-card flex>
+                        <md-card-title flex="none">
+                            <md-card-title-text>
+                                <span class="md-headline">
+                                    {{country.name}}
+                                    <img class="country-flag" ng-src="images/flags/{{country.factbookCode}}-lgflag.gif">
+                                </span>
+                            </md-card-title-text>
+                        </md-card-title>
+                        <md-card-content flex>
+                            <div class="info-block">
+                                <span class="country-detail-lbl">General</span>:
+                                <span>{{country.generalInfo}}</span>
+                            </div>
 
-                        <div class="info-block">
-                            <span class="country-detail-lbl">General</span>:
-                            <span>{{country.generalInfo}}</span>
-                            <img class="country-map" ng-src="images/maps/{{country.factbookCode}}-map.gif">
-                        </div>
-
-                        <div class="info-block">
-                            <span class="country-detail-lbl">Climate</span>:
-                            <span>{{country.climate}}</span>
-                        </div>
-
-                        <div class="info-block">
-                            <span class="country-detail-lbl">Languages</span>:
-                            <ul>
-                                <li ng-repeat="lang in country.languages">
-                                    {{lang.language}} {{lang.percentPop}}
-                                </li>
-                            </ul>
-                        </div>
-                    </md-card-content>
-                </md-card>
+                            <div class="info-block">
+                                <span class="country-detail-lbl">Climate</span>:
+                                <span>{{country.climate}}</span>
+                            </div>
+                        </md-card-content>
+                    </md-card>
+                </md-content>
 
                 <!--
                     Government
@@ -105,42 +94,65 @@
                     - country.borders
                     - country.capital
                 -->
-                <md-card flex-gt-sm="50">
-                    <md-card-title>
-                        <span class="md-headline">Government</span>
-                    </md-card-title>
-                    <md-card-content flex>
-                        <!-- Content goes here -->
-                        <div class="info-block">
-                            <span class="country-detail-lbl">Capital</span>:
-                            {{country.capital}}
-                        </div>
+                <md-content flex-gt-sm="50" layout="column">
+                    <md-card flex>
+                        <md-card-title flex="none">
+                            <md-card-title-text>
+                                <span class="md-headline">Government/Geography</span>
+                            </md-card-title-text>
+                        </md-card-title>
+                        <md-card-content flex>
+                            <!-- Content goes here -->
+                            <div class="info-block">
+                                <span class="country-detail-lbl">Capital</span>:
+                                {{country.capital}}
+                            </div>
 
-                        <div class="info-block">
-                            <span class="country-detail-lbl">Government Type</span>:
-                            {{country.govType}}
-                        </div>
+                            <div class="info-block">
+                                <span class="country-detail-lbl">Subregion/Region</span>:
+                                {{country.subregion}}/{{country.region}}
+                            </div>
 
-                        <div class="info-block" ng-repeat="leader in country.leaders">
-                            <span class="country-detail-lbl">{{leader.type}}</span>:
-                            {{leader.name}}<br />
-                            <span class="country-detail-lbl">Term Start</span>:
-                            {{leader.termStart}}<br />
-                            <span class="country-detail-lbl">Term End</span>:
-                            {{leader.termEnd}}
-                        </div>
+                            <div class="info-block">
+                                <span class="country-detail-lbl">Government Type</span>:
+                                {{country.govType}}
+                            </div>
 
-                        <div class="info-block">
-                            <span class="country-detail-lbl">Borders</span>:
-                            <ul>
-                                <li class="country-link" ng-repeat="bc in country.borders" ng-click="getCountryInfo(bc.name)">
-                                    {{bc.name}}
-                                </li>
-                            </ul>
-                        </div>
+                            <div class="info-block" ng-repeat="leader in country.leaders">
+                                <span class="country-detail-lbl">{{leader.type}}</span>:
+                                {{leader.name}}<br />
+                                <span class="country-detail-lbl">Term Start</span>:
+                                {{leader.termStart}}<br />
+                                <span class="country-detail-lbl">Term End</span>:
+                                {{leader.termEnd}}
+                            </div>
 
-                    </md-card-content>
-                </md-card>
+                            <img class="country-map" ng-src="images/maps/{{country.factbookCode}}-map.gif">
+
+                            <div class="info-block">
+                                <span class="country-detail-lbl">Borders</span>:
+                                <ul>
+                                    <li class="country-link" ng-repeat="bc in country.borders" ng-click="getCountryInfo(bc.name)">
+                                        {{bc.name}}
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="info-block">
+                                <span class="country-detail-lbl">Languages</span>:
+                                <table class="language-table">
+                                    <tbody>
+                                    <tr ng-repeat="lang in country.languages | orderObjectBy:'percentPop':true">
+                                        <td>{{lang.language}}</td>
+                                        <td><span ng-if="lang.percentPop">{{lang.percentPop}}%</span></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </md-card-content>
+                    </md-card>
+                </md-content>
             </div>
 
             <div layout="column" layout-gt-sm="row" layout-margin>
@@ -151,7 +163,9 @@
                 -->
                 <md-card flex>
                     <md-card-title>
-                        <span class="md-headline">Economy</span>
+                        <md-card-title-text>
+                            <span class="md-headline">Economy</span>
+                        </md-card-title-text>
                     </md-card-title>
                     <md-card-content>
                         <!-- Content goes here -->
@@ -160,9 +174,7 @@
                             {{country.economy}}
                         </div>
 
-                        <div>
-                            <nvd3 options="gdpOptions" data="gdpData"></nvd3>
-                        </div>
+                        <nvd3 options="gdpOptions" data="gdpData"></nvd3>
 
                     </md-card-content>
                 </md-card>
@@ -177,11 +189,155 @@
                 -->
                 <md-card flex>
                     <md-card-title>
-                        <span class="md-headline">War/Peace</span>
+                        <md-card-title-text>
+                            <span class="md-headline">War/Peace</span>
+                        </md-card-title-text>
                     </md-card-title>
                     <md-card-content>
                         <!-- Content goes here -->
-
+                        <md-content>
+                            <md-tabs md-dynamic-height md-border-bottom>
+                                <md-tab label="Conflicts">
+                                    <div ng-if="!country.conflicts || country.conflicts.length == 0">
+                                        <h2 class="none-found-heading">No conflicts found</h2>
+                                    </div>
+                                    <div ng-if="country.conflicts && country.conflicts.length > 0" layout="row">
+                                        <div flex="50" class="search-table">
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th ng-click="order('conflictId')">
+                                                            Conflict ID
+                                                            <span ng-if="predicate == 'conflictId'">
+                                                                <fa ng-if="!reverse" name="chevron-down"></fa>
+                                                                <fa ng-if="reverse" name="chevron-up"></fa>
+                                                            </span>
+                                                        </th>
+                                                        <th ng-click="order('location')">
+                                                            Location
+                                                            <span ng-if="predicate == 'location'">
+                                                                <fa ng-if="!reverse" name="chevron-down"></fa>
+                                                                <fa ng-if="reverse" name="chevron-up"></fa>
+                                                            </span>
+                                                        </th>
+                                                        <th ng-click="order('start')">
+                                                            Start
+                                                            <span ng-if="predicate == 'start'">
+                                                                <fa ng-if="!reverse" name="chevron-down"></fa>
+                                                                <fa ng-if="reverse" name="chevron-up"></fa>
+                                                            </span>
+                                                        </th>
+                                                        <th ng-click="order('end')">
+                                                            End
+                                                            <span ng-if="predicate == 'end'">
+                                                                <fa ng-if="!reverse" name="chevron-down"></fa>
+                                                                <fa ng-if="reverse" name="chevron-up"></fa>
+                                                            </span>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr ng-repeat="conflict in country.conflicts | orderBy:predicate:reverse" ng-click="showCountryConflictParties(conflict)">
+                                                        <td>{{::conflict.conflictId}}</td>
+                                                        <td>{{::conflict.location}}</td>
+                                                        <td>{{::conflict.start}}</td>
+                                                        <td>{{::conflict.end}}</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div ng-if="selectedCountryConflict" flex="50" class="search-sub-table">
+                                            <div layout="column">
+                                                <div flex class="sub-header">
+                                                    <div>
+                                                        <span class="country-detail-lbl">Conflict Id</span>: {{selectedCountryConflict.conflictId}}
+                                                    </div>
+                                                    <div>
+                                                        <span class="country-detail-lbl">Location</span>: {{selectedCountryConflict.location}}
+                                                    </div>
+                                                    <div>
+                                                        <span class="country-detail-lbl">Start</span>: {{selectedCountryConflict.start}}
+                                                    </div>
+                                                    <div>
+                                                        <span class="country-detail-lbl">End</span>: {{selectedCountryConflict.end}}
+                                                    </div>
+                                                </div>
+                                                <div flex class="sub-body">
+                                                    <div layout="row">
+                                                        <div flex="50">
+                                                            <h4 class="subcountry-detail-lbl">Side A</h4>
+                                                            <div ng-repeat="c in conflictCountries.sideA" >
+                                                                <span ng-if="c.countryName" ng-click="getCountryInfo(c.countryName)" class="country-link">{{::c.countryName}}</span>
+                                                                <span ng-if="c.partyName">{{::c.partyName}}</span>
+                                                            </div>
+                                                        </div>
+                                                        <div flex="50">
+                                                            <h4 class="subcountry-detail-lbl">Side B</h4>
+                                                            <div ng-repeat="c in conflictCountries.sideB" >
+                                                                <span ng-if="c.countryName" ng-click="getCountryInfo(c.countryName)" class="country-link">{{::c.countryName}}</span>
+                                                                <span ng-if="c.partyName">{{::c.partyName}}</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </md-tab>
+                                <md-tab label="Treaties">
+                                    <md-content class="md-padding">
+                                        <div layout="row">
+                                            <div flex="40" class="search-table">
+                                                <table>
+                                                    <thead>
+                                                    <tr>
+                                                        <th ng-click="order('name')">
+                                                            Name
+                                                            <span ng-if="predicate == 'name'">
+                                                                <fa ng-if="!reverse" name="chevron-down"></fa>
+                                                                <fa ng-if="reverse" name="chevron-up"></fa>
+                                                            </span>
+                                                        </th>
+                                                        <th ng-click="order('dateEnforced')">
+                                                            Date Enforced
+                                                            <span ng-if="predicate == 'dateEnforced'">
+                                                                <fa ng-if="!reverse" name="chevron-down"></fa>
+                                                                <fa ng-if="reverse" name="chevron-up"></fa>
+                                                            </span>
+                                                        </th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr ng-repeat="treaty in country.treaties | orderBy:predicate:reverse" ng-click="showTreatyCoparties(treaty)" ng-class="{'bad-row': treaty.isParty == '0'}">
+                                                            <td>{{::treaty.name}}</td>
+                                                            <td>{{treaty.dateEnforced | dateFilter | date: 'mediumDate'}}</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div ng-if="selectedCountryTreaty" flex="60" class="search-sub-table">
+                                                <div class="sub-header">
+                                                    <div>
+                                                        <h4 class="subcountry-detail-lbl" style="display: inline;">{{selectedCountryTreaty.name}}</h4>
+                                                        <a ng-href="{{selectedCountryTreaty.wikipage}}" target="_blank"><fa name="wikipedia-w " size="lg"></fa></a>
+                                                    </div>
+                                                    <div>
+                                                        {{selectedCountryTreaty.description}}
+                                                    </div>
+                                                </div>
+                                                <div class="sub-body">
+                                                    <ul>
+                                                        <li ng-repeat="country in treatyCountries" class="country-link" ng-click="getCountryInfo(country.name)">
+                                                            {{::country.name}}
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </md-content>
+                                </md-tab>
+                            </md-tabs>
+                        </md-content>
 
                     </md-card-content>
                 </md-card>
@@ -198,23 +354,20 @@
                 -->
                 <md-card flex>
                     <md-card-title>
-                        <span class="md-headline">Stats</span>
+                        <md-card-title-text>
+                            <span class="md-headline">Stats</span>
+                        </md-card-title-text>
                     </md-card-title>
                     <md-card-content>
                         <!-- Content goes here -->
-                        <div class="info-block">
-                            <span class="country-detail-lbl">TOP10 Immigrants Countries</span>:
-                            <ul>
-                                <li ng-repeat="c in country.immigrants">
-                                    {{c.origCtry}}, {{c.ttlAmt}}
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div>
-                            <nvd3 options="immigrantOptions" data="immigrantData"></nvd3>
-                        </div>
-
+                        <md-content>
+                            <md-tabs md-selected="country.selectedStat" md-dynamic-height md-border-bottom>
+                                <md-tab ng-repeat="stat in statTabs" label="{{stat.tabLabel}}" md-on-select="getStatData($index)">
+                                    <nvd3 ng-if="country.selectedStat == $index" options="statOptions" data="statData"></nvd3>
+                                    <nvd3 ng-if="country.selectedSubStat" options="subStatOptions" data="subStatData"></nvd3>
+                                </md-tab>
+                            </md-tabs>
+                        </md-content>
 
                     </md-card-content>
                 </md-card>

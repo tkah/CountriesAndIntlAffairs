@@ -13,9 +13,12 @@ md-toolbar .md-toolbar-tools h2 { font-weight: 700; font-size: 1.8em; }
   display: none !important;
 }
 
-#search-table {
+.none-found-heading { font-weight: 700; margin: 10px; }
+.search-table {
   overflow-y: scroll;
   height: 400px;
+
+  .bad-row { color: lightgray; }
 
   table {
     table-layout: fixed;
@@ -64,7 +67,7 @@ md-toolbar .md-toolbar-tools h2 { font-weight: 700; font-size: 1.8em; }
   cursor: pointer;
 }
 
-#search-sub-table {
+.search-sub-table {
   margin-top: 5px;
   margin-left: 5px;
   padding: 5px;
@@ -143,6 +146,10 @@ md-toolbar .md-toolbar-tools h2 { font-weight: 700; font-size: 1.8em; }
   }
 }
 
+.language-table {
+  td { padding: 5px; }
+}
+
 #country-info {
   .info-block { margin: 10px 0; }
   .country-flag {
@@ -152,9 +159,9 @@ md-toolbar .md-toolbar-tools h2 { font-weight: 700; font-size: 1.8em; }
   }
 
   .country-map {
-    float: left;
-    max-width: 200px;
-    max-height: 200px;
+    float: right;
+    max-width: 400px;
+    max-height: 400px;
     margin: 10px;
   }
 }
