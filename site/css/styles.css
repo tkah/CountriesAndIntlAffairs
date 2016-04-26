@@ -118,6 +118,17 @@ md-toolbar .md-toolbar-tools h2 {
   max-height: 400px;
   margin: 10px; }
 
+footer {
+  margin-top: 10px;
+  padding: 10px;
+  color: black;
+  background: darkgrey; }
+  footer a {
+    color: #1F3A93; }
+  footer h2 {
+    font-size: 1.4em;
+    font-weight: 700; }
+
 .bold {
   font-weight: 700; }
 

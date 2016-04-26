@@ -190,4 +190,34 @@ $query->execute();
 $ex = $query->fetchAll(PDO::FETCH_ASSOC);
 $country['expectancy'] = $ex;
 
+/* Get export table data and assign array to country object */
+$query = $connection->prepare("
+SELECT c.name, tw.total
+FROM Countries c, TradesWith tw
+WHERE tw.countryCode = :c_code
+AND tw.type = 'Export'
+AND tw.partnerCountryCode = c.countryCode
+ORDER BY tw.total DESC
+");
+
+$query->bindValue(':c_code', $country['countryCode'], PDO::PARAM_STR);
+$query->execute();
+$export = $query->fetchAll(PDO::FETCH_ASSOC);
+$country['exports'] = $export;
+
+/* Get export table data and assign array to country object */
+$query = $connection->prepare("
+SELECT c.name, tw.total
+FROM Countries c, TradesWith tw
+WHERE tw.countryCode = :c_code
+AND tw.type = 'Import'
+AND tw.partnerCountryCode = c.countryCode
+ORDER BY tw.total DESC
+");
+
+$query->bindValue(':c_code', $country['countryCode'], PDO::PARAM_STR);
+$query->execute();
+$import = $query->fetchAll(PDO::FETCH_ASSOC);
+$country['imports'] = $import;
+
 echo json_encode($country);
