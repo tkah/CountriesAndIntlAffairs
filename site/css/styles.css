@@ -118,6 +118,9 @@ md-toolbar .md-toolbar-tools h2 {
   max-height: 400px;
   margin: 10px; }
 
+.bold {
+  font-weight: 700; }
+
 .angular-google-map-container {
   height: 300px;
   width: 100%; }

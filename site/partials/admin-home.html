@@ -1,0 +1,96 @@
+<div layout="column">
+    <md-card>
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">Update Leaders</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+            <!-- Content goes here -->
+            <form name="leaderUpdateForm" ng-submit="updateLeaders()">
+                <div layout="column">
+                    <md-input-container>
+                        <label>Pick a state</label>
+                        <md-select ng-model="admin.leaderUpdateCountry" md-on-close="getCountryLeaders(admin.leaderUpdateCountry)">
+                            <md-option ng-repeat="country in ::admin.countries" value="{{::country.countryCode}}">
+                                {{::country.name}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                </div>
+                <div layout="column" layout-gt-sm="row" ng-repeat="leader in admin.updateLeaders">
+                    <div flex-gt-sm="25">
+                        <label class="bold">Leader Name</label>:<br /> {{::leader.name}}
+                    </div>
+                    <div flex-gt-sm="25">
+                        <label class="bold">Leader Type</label>:<br /> {{::leader.type}}
+                    </div>
+                    <div flex-gt-sm="25">
+                        <label class="bold">Leader Term Start</label>:<br /> {{::leader.termStart}}
+                    </div>
+                    <div flex-gt-sm="25">
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Leader Term End</label>
+                            <input ng-model="leader.termEnd">
+                        </md-input-container>
+                    </div>
+                </div>
+                <div layout="column">
+                    <md-button type="submit" class="md-raised md-primary">Update</md-button>
+                </div>
+            </form>
+        </md-card-content>
+    </md-card>
+
+    <md-card>
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">Insert Leader</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+            <!-- Content goes here -->
+            <form name="leaderInsertForm" ng-submit="insertLeader(newLeader, admin.leaderInsertCountry)">
+                <div layout="column">
+                    <md-input-container>
+                        <label>Pick a state</label>
+                        <md-select ng-model="admin.leaderInsertCountry" ng-init="admin.insertLeaderReady = false" md-on-close="admin.insertLeaderReady = true">
+                            <md-option ng-repeat="country in ::admin.countries" value="{{::country.countryCode}}">
+                                {{::country.name}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                </div>
+                <div layout="column" layout-gt-sm="row">
+                    <div flex-gt-sm="25">
+                        <md-input-container class="md-block" flex-gt-sm>
+                        <label>Leader Name</label>
+                        <input ng-model="newLeader.name">
+                    </md-input-container>
+                    </div>
+                    <div flex-gt-sm="25">
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Leader Type</label>
+                            <input ng-model="newLeader.type">
+                        </md-input-container>
+                    </div>
+                    <div flex-gt-sm="25">
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Leader Term Start</label>
+                            <input ng-model="newLeader.termStart">
+                        </md-input-container>
+                    </div>
+                    <div flex-gt-sm="25">
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Leader Term End</label>
+                            <input ng-model="newLeader.termEnd">
+                        </md-input-container>
+                    </div>
+                </div>
+                <div layout="column">
+                    <md-button type="submit" ng-disabled="!admin.insertLeaderReady" class="md-raised md-primary">Insert</md-button>
+                </div>
+            </form>
+        </md-card-content>
+    </md-card>
+</div>

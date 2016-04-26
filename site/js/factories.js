@@ -111,6 +111,21 @@
                         /* Return a promise which will force the variable to wait until a response is received from the DB */
                         return deferred.promise;
                     },
+                    getCountryLeaders: function (cId) {
+                        var deferred = $q.defer();
+                        var obj = {cId: cId};
+
+                        // Use conflict id to get data from DB
+                        $http.post("model/get_country_leaders.php", obj, {})
+                            .then(function (res) {
+                                deferred.resolve({
+                                    leaders: res.data
+                                });
+                            });
+
+                        /* Return a promise which will force the variable to wait until a response is received from the DB */
+                        return deferred.promise;
+                    },
                     getLanguageCountries: function (lang) {
                         var deferred = $q.defer();
                         var obj = {language: lang};
@@ -141,6 +156,20 @@
                         /* Return a promise which will force the variable to wait until a response is received from the DB */
                         return deferred.promise;
                     },
+                    getPlainCountryList: function () {
+                        var deferred = $q.defer();
+
+                        // Use conflict id to get data from DB
+                        $http.get("model/get_plain_country_list.php")
+                            .then(function (res) {
+                                deferred.resolve({
+                                    countries: res.data
+                                });
+                            });
+
+                        /* Return a promise which will force the variable to wait until a response is received from the DB */
+                        return deferred.promise;
+                    },
                     getTreatyCountries: function (num) {
                         var deferred = $q.defer();
                         var obj = {treatyNum: num};
@@ -155,6 +184,29 @@
 
                         /* Return a promise which will force the variable to wait until a response is received from the DB */
                         return deferred.promise;
+                    },
+                    insertLeader: function (leader, country) {
+                        var deferred = $q.defer();
+                        var obj = {leader: leader, country: country};
+
+                        // Use conflict id to get data from DB
+                        $http.post("model/insert_country_leader.php", obj, {})
+                            .then(function (res) {
+                                deferred.resolve({
+                                    status: "success"
+                                });
+                            });
+
+                        return deferred.promise;
+                    },
+                    updateLeaders: function (leaders) {
+                        var obj = {leaders: leaders};
+
+                        // Use conflict id to get data from DB
+                        $http.post("model/update_country_leaders.php", obj, {})
+                            .then(function (res) {
+                                console.log("success");
+                            });
                     }
                 }
             }

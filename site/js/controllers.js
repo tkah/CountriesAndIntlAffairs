@@ -32,7 +32,7 @@
                         tabLabel: 'CO2',
                         chartType: 'lineChart',
                         xLabel: 'Years',
-                        yLabel: 'CO2 Output (tons?)',
+                        yLabel: 'CO2 Output (metric tons per capita)',
                         xFunc: function(d){return d.year},
                         yFunc: function(d){return d.amount}
                     }, {
@@ -195,6 +195,7 @@
                 $scope.setCountry = function(country) {
                     $scope.country = country;
                     $scope.country.selectedStat = 0;
+                    $scope.country.selectedSubStat= null;
 
                     $scope.toCountryInfo();
 
@@ -401,8 +402,32 @@
             }
         ])
 
-        .controller('AdminCtrl', ['$scope', '$log',
-            function ($scope, $log) {
+        .controller('AdminCtrl', ['$scope', 'CountryFactory',
+            function ($scope, CountryFactory) {
+                $scope.admin = {};
+                CountryFactory.getPlainCountryList()
+                    .then(function (res) {
+                        $scope.admin.countries = res.countries;
+                    });
+
+                $scope.getCountryLeaders = function(cId) {
+                    CountryFactory.getCountryLeaders(cId)
+                        .then(function (res) {
+                           $scope.admin.updateLeaders = res.leaders;
+                        });
+                };
+
+                $scope.updateLeaders = function() {
+                    CountryFactory.updateLeaders($scope.admin.updateLeaders);
+                };
+
+                $scope.insertLeader = function(leader, country) {
+                    console.log(country);
+                    CountryFactory.insertLeader(leader, country)
+                        .then(function (res) {
+                            $scope.newLeader = null;
+                        });
+                };
             }
         ]);
 
