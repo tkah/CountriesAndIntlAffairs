@@ -158,6 +158,7 @@
                 $scope.statData = [];
 
                 $scope.getStatData = function(index) {
+                    $scope.country.selectedSubStat= null;
                     $scope.statOptions.chart.type = $scope.statTabs[index].chartType;
                     $scope.statOptions.chart.xAxis.axisLabel = $scope.statTabs[index].xLabel;
                     $scope.statOptions.chart.yAxis.axisLabel = $scope.statTabs[index].yLabel;
